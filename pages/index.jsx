@@ -1,19 +1,22 @@
 import EventItem from "@/components/EventItem";
 import Layout from "@/components/Layout";
 import { API_URL } from '@/config/index';
+import Link from "next/link";
 
 
-export default function EventsPage({ events }) {
-
+export default function Home({ events }) {
+  const res = events.data
   return (
     <Layout>
-      <h1>Events</h1>
-      {events.length === 0 && <h3>No events to show!</h3>}
+      <h1>Upcoming Events</h1>
+      {res.length === 0 && <h3>No events to show!</h3>}
 
-      {events.data.map((evt) => (
-        <EventItem key={evt.id} evt={evt}/>
+      {res.map((evt) => (
+        <EventItem key={evt.id} evt={evt} />
       ))
       }
+
+      {res.length > 0 && (<Link href='/events'><button className="btn-secondary">View All Events</button></Link>)}
 
 
     </Layout>
@@ -23,6 +26,7 @@ export default function EventsPage({ events }) {
 export async function getStaticProps() {
   const res = await fetch(`${API_URL}/api/events?populate=*`)
   const events = await res.json()
+  console.log(events)
 
 
   return {

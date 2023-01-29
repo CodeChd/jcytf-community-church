@@ -1,5 +1,5 @@
 .header {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,6 +10,10 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
+
+
+
+  
   .header a {
     color: #333;
     margin-right: 20px;
@@ -18,11 +22,14 @@
   .header a:hover {
     color: #000;
   }
+
+  
   .header ul {
     display: flex;
     align-items: center;
     justify-content: center;
     list-style: none;
+    gap: 1rem;
   }
   
   .logo {
