@@ -31,3 +31,10 @@
     display: block;
     margin-top: 40px;
 }
+
+@media (max-width: 600px){
+    .image{
+        min-width: 600px;
+    }
+    
+}

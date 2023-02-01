@@ -5,9 +5,14 @@ import Link from "next/link";
 
 
 export default function Home({ events }) {
+
+
   const res = events.data
+  console.log(res)
   return (
     <Layout>
+
+
       <h1>Upcoming Events</h1>
       {res.length === 0 && <h3>No events to show!</h3>}
 
@@ -24,13 +29,14 @@ export default function Home({ events }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/api/events?populate=*`)
+
+  //fetch events
+  const res = await fetch(`${API_URL}/api/events?sort=date%3Aasc&pagination[limit]=3&populate=*`)
   const events = await res.json()
-  console.log(events)
 
 
   return {
     props: { events },
-    revalidate: 1,
+    revalidate:  1
   }
 }

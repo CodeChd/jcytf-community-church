@@ -1,35 +1,66 @@
+import { useContext, useEffect } from "react"
 import Link from "next/link"
 import styles from '@/styles/Header.module.css'
-import Search from "./Search"
-import { useRouter } from "next/router"
+import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa"
+import AuthContext from "@/context/AuthContext"
 
 const Header = () => {
+    const { user, logout } = useContext(AuthContext)
 
-    const router = useRouter()
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
                 <Link href='/'>
-                    <p>Festival Events</p>
+                    <p>JCYTF</p>
                 </Link>
 
             </div>
 
-            {router.pathname === '/events' && 'events/search' && <Search/>}
- 
+
+
             <nav>
                 <ul>
                     <li>
                         <Link href='/events'>
-                            <p> Events</p>
+                            <p> VISIT</p>
                         </Link>
                     </li>
                     <li>
-                        <Link href='/events/add'>
-                            <p>Add Event</p>
+                        <Link href='/events'>
+                            <p>EVENTS</p>
                         </Link>
                     </li>
-                    `
+                    <li>
+                        <Link href='/events'>
+                            <p>PROGRAMS</p>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href='/events'>
+                            <p>PARTNERS</p>
+                        </Link>
+                    </li>
+                    {user ? (<>
+                        <li>
+                            <Link href='/events/add'>
+                                <p>Add Event</p>
+                            </Link>
+                        </li>
+
+                        <li>
+                            <button className="btn-nav btn-icon" onClick={() => logout()}>
+                                <FaSignOutAlt />LOGOUT
+
+                            </button>
+                        </li>
+                    </>
+                    ) : (
+                        <li>
+                            <Link href='/account/login'>
+                                <p className="btn-secondary btn-icon"><FaSignInAlt /> Login</p>
+                            </Link>
+                        </li>
+                    )}
                 </ul>
             </nav>
         </header>

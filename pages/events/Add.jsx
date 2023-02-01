@@ -39,7 +39,7 @@ const AddEvents = () => {
     }
 
     // const data = {data : {...values}}
-    const res = await fetch(`${API_URL}/api/events?populate=*`, {
+    const res = await fetch(`${API_URL}/api/events`, {
 
       method: 'POST',
       headers: {

@@ -11,12 +11,18 @@ export default function EventItem({ evt }) {
     return (
         <div className={styles.event}>
             <div className={styles.img}>
-                <Image src={evt.attributes.image ? evt.attributes.image.data.attributes.formats.thumbnail.url : '/images/event-default.png'} width={170} height={100} alt="Event" />
+                {
+                evt.attributes.image.data === null ?( <Image src={'/images/event-default.png'} width={170} height={100} alt="Event" />) 
+                :
+                ( <Image src={evt.attributes.image.data.attributes.formats.thumbnail.url} width={170} height={100} alt="Event" />)
+                
+                }
+               
             </div>
 
             <div className={styles.info}>
                 <span >
-                    {new Date (evt.attributes.date).toLocaleDateString('en-US')} AT {evt.attributes.time}
+                    {evt.attributes.date ? new Date (evt.attributes.date).toLocaleDateString('en-US'): ""} AT {evt.attributes.time && evt.attributes.time}
                 </span>
                 <h3>{evt.attributes.name}</h3>
 

@@ -2,7 +2,7 @@ import Head from "next/head"
 import styles from '@/styles/Layout.module.css'
 import Footer from "./Footer"
 import Header from "./Header"
-import Showcase from "pages/events/Showcase"
+import Showcase from "@/components/Showcase"
 import { useRouter } from "next/router"
 
 const Layout = ({ title, keywords, description, children }) => {
@@ -28,9 +28,9 @@ const Layout = ({ title, keywords, description, children }) => {
 }
 
 Layout.defaultProps = {
-  title: 'Festival Event | full weekend of live music entertaiment',
-  description: 'Find the latest DJ and other musical events ',
-  keywords: 'music, dj, edm, events '
+  title: 'JCYTF | Community Church',
+  description: 'kingdom of god',
+  keywords: 'church, group, worships, events '
 }
 
 export default Layout

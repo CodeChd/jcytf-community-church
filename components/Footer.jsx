@@ -7,7 +7,7 @@ const Footer = () => {
             <p>Developed by | Carl | All Star Group</p>
 
                 <p>
-                <Link href='/about'>About This Project</Link> 
+                <Link href='/about'>About</Link> 
                 </p>
         </footer>
     )
