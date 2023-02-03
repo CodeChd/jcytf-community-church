@@ -1,5 +1,5 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337'
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://capstone-jcytf-ccc1.onrender.com'
 
 export const PER_PAGE = 3   
 
-export const NEXT_URL = process.env.NEXT_PUBLIC_FR_URL || 'http://localhost:3000'
+export const NEXT_URL = process.env.NEXT_PUBLIC_FRONTEND_URL || 'http://localhost:3000'

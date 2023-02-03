@@ -175,7 +175,7 @@ const EditEvents = ({ Edata ,token}) => {
 export default EditEvents
 
 export async function getServerSideProps({ params: { id }, req }) {
-    const res = await fetch(`http://localhost:1337/api/events?populate=*&filters\[id\]=${id}`)
+    const res = await fetch(`${API_URL}/api/events?populate=*&filters\[id\]=${id}`)
     const Edata = await res.json()
 
     const {token} = parseCookies(req)
