@@ -7,6 +7,8 @@ import AuthContext from "@/context/AuthContext"
 const Header = () => {
     const { user, logout } = useContext(AuthContext)
 
+    console.log(user)
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
@@ -41,9 +43,10 @@ const Header = () => {
                         </Link>
                     </li>
                     {user ? (<>
+            
                         <li>
-                            <Link href='/events/add'>
-                                <p>Add Event</p>
+                            <Link href='/account/dashboard'>
+                                <h4>DASHBOARD</h4>
                             </Link>
                         </li>
 

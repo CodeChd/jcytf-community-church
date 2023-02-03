@@ -14,7 +14,9 @@ export default function Home({ events }) {
 
 
       <h1>Upcoming Events</h1>
+      <div className='center'>
       {res.length === 0 && <h3>No events to show!</h3>}
+      </div>
 
       {res.map((evt) => (
         <EventItem key={evt.id} evt={evt} />

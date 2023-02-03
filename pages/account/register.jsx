@@ -6,6 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import styles from '@/styles/Auth.module.css'
+import AuthContext from '@/context/AuthContext';
+
 
 export default function Register() {
     const [username, setUsername] = useState('')
@@ -13,16 +15,25 @@ export default function Register() {
     const [password, setPassword] = useState('')
     const [passwordConfirm, setPasswordConfirm] = useState('')
 
+
+    const {register} = useContext(AuthContext)
+
+
     const handleSubmit = (e) =>{
         e.preventDefault()
         console.log('hello')
 
-        if(password !== passwordConfirm){
+        if (!username || !email || !password || !passwordConfirm) {
+            toast.error("Fill In the Required fields");
+            return;
+          }
+
+        else if(password !== passwordConfirm ){
             toast.error('Password do not match!')
             return
         }
 
-        console.log({username, email, password})
+        register({username, email, password})
 
     }
 
@@ -51,7 +62,7 @@ export default function Register() {
                     <input type="password"  placeholder='Password' id='passwordConfirm' value={passwordConfirm} onChange={(x) => setPasswordConfirm(x.target.value)}/>
                 </div>
 
-                <input type="submit" value='Login' className='btn' />
+                <input type="submit" value='Register' className='btn' />
             </form>
             <p>Already have an account? <Link href='/account/login'>Login</Link></p>
         </div>

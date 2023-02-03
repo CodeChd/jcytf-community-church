@@ -2,13 +2,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Layout from "@/components/Layout"
 import { useRouter } from "next/router"
-// import axios from 'axios';
 import { useState } from "react"
 import Link from "next/link"
 import { API_URL } from "@/config/index" 
 import styles from '@/styles/Form.module.css'
+import { parseCookies } from '@/helper/index';
 
-const AddEvents = () => {
+const AddEvents = ({token}) => {
   const [values, setValue] = useState({
     name: '',
     performers: '',
@@ -20,7 +20,6 @@ const AddEvents = () => {
   })
 
 
-  console.log(values)
 
 
 
@@ -44,6 +43,7 @@ const AddEvents = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Authorization : `Bearer ${token}`,
       },
       body: JSON.stringify(
         {
@@ -63,6 +63,12 @@ const AddEvents = () => {
     })
 
     if (!res.ok) {
+      if(res.status === 403 || res.status === 401){
+
+        toast.error('No Token!')
+        return
+      
+      }
       toast.error('Something Went Wrong!')
     } else {
       const evt = await res.json()
@@ -125,3 +131,12 @@ const AddEvents = () => {
 }
 
 export default AddEvents
+
+
+export async function getServerSideProps ({req}) {
+  const {token} = parseCookies(req)
+console.log(token)
+  return{
+    props : {token}
+  }
+}

@@ -6,14 +6,25 @@ import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import styles from '@/styles/Auth.module.css'
+import AuthContext from '@/context/AuthContext';
 
 export default function login() {
+
+
+    
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const {login} = useContext(AuthContext)
+
+    
 
     const handleSubmit = (e) =>{
-        e.preventdefault()
-        console.log('hello')
+        e.preventDefault()
+        if (!email || !password) {
+            toast.error("Fill In the Required fields");
+            return;
+          }
+          login({ email, password });
     }
 
   return ( 

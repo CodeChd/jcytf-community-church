@@ -11,8 +11,10 @@ import { formatDateInput } from '@/utils/fomatDate'
 import styles from '@/styles/Form.module.css'
 import Image from 'next/image';
 import { FaImage } from 'react-icons/fa';
+import { parseCookies } from '@/helper/index';
 
-const EditEvents = ({ Edata }) => {
+
+const EditEvents = ({ Edata ,token}) => {
     const [values, setValue] = useState({
         name: Edata.attributes.name,
         performers: Edata.attributes.performers,
@@ -51,6 +53,7 @@ const EditEvents = ({ Edata }) => {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
+                Authorization : `Bearer ${token}`,
             },
             body: JSON.stringify(
                 {
@@ -70,6 +73,13 @@ const EditEvents = ({ Edata }) => {
         })
 
         if (!res.ok) {
+            
+            if(res.status === 403 || res.status === 401){
+
+                toast.error('Unauthorized!')
+                return
+            }        
+
             toast.error('Something Went Wrong!')
         } else {
             const evt = await res.json()
@@ -114,7 +124,7 @@ const EditEvents = ({ Edata }) => {
                 </div>
 
                 <Modal show={showModal} onClose={() => setModal(false)}>
-                    <ImageUpload eventId={Edata.id} imageUploaded={imageUploaded}/>
+                    <ImageUpload eventId={Edata.id} imageUploaded={imageUploaded} token={token}/>
                 </Modal>
             </div>
 
@@ -164,13 +174,16 @@ const EditEvents = ({ Edata }) => {
 
 export default EditEvents
 
-export async function getServerSideProps({ params: { id } }) {
+export async function getServerSideProps({ params: { id }, req }) {
     const res = await fetch(`http://localhost:1337/api/events?populate=*&filters\[id\]=${id}`)
     const Edata = await res.json()
 
+    const {token} = parseCookies(req)
+
     return {
         props: {
-            Edata: Edata.data[0]
+            Edata: Edata.data[0],
+            token
         }
     }
 }

@@ -23,7 +23,10 @@ export default function EventsPage({ events, total, page }) {
       {router.pathname === '/events' && 'events/search' && <Search/>}
 
       </div>
+      <div className="center">
+
       {events.data.length === 0 && <h3>No events to show!</h3>}
+      </div>
 
       {events.data.map((evt) => (
         <EventItem key={evt.id} evt={evt} />
