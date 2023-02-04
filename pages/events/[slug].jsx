@@ -11,7 +11,7 @@ import styles from '@/styles/Event.module.css'
 
 const slug = ({ evt }) => {
   const res = evt
-  const router = useRouter()
+  // const router = useRouter()
 
 
 
@@ -95,7 +95,7 @@ export async function getServerSideProps({params : {slug}}) {
 
   const res = await fetch(`${API_URL}/api/events?populate=*&filters\[slug\][$eq]=${slug}`)
   const events = await res.json()
-  console.log(events)
+  console.log(events.data[0])
 
   return {
     props: {
