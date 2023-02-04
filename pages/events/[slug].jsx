@@ -26,9 +26,9 @@ const slug = ({ evt }) => {
           </a>
         </div> */}
 
-        <span>
+        {/* <span>
         {new Date (res.attributes.date).toLocaleDateString('en-US')} at {res.attributes.time}
-        </span>
+        </span> */}
         <h1>{res.attributes.name}</h1>
         {res.attributes.image.data !== null ? (
           <div className={styles.image}>
