@@ -43,9 +43,7 @@ export default function Dashboard({ events, token }) {
                 <div className={styles.grid}>
 
                     <h3>My Events</h3>
-                    <Link href='/events/add'>
-                        <button className="btn-event btn-icon">Add Event</button>
-                    </Link>
+                  
 
 
                 </div>
