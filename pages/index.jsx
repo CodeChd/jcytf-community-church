@@ -25,6 +25,10 @@ export default function Home({ events }) {
 
       {res.length > 0 && (<Link href='/events'><button className="btn-secondary">View All Events</button></Link>)}
 
+      <Link href='/events/add'>
+                        <button className="btn-event btn-icon">Add Event</button>
+                    </Link>
+
 
     </Layout>
   );
