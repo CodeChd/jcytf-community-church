@@ -37,7 +37,6 @@ const AddEvents = ({token}) => {
       toast.error('Please fill in all fields!')
     }
 
-    // const data = {data : {...values}}
     const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events`, {
 
       method: 'POST',

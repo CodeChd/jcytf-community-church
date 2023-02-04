@@ -7,7 +7,7 @@ import AuthContext from "@/context/AuthContext"
 const Header = () => {
     const { user, logout } = useContext(AuthContext)
 
-    console.log(user)
+    // console.log(user)
 
     return (
         <header className={styles.header}>
