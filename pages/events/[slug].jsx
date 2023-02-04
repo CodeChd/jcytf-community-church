@@ -1,21 +1,17 @@
-import { useRouter } from 'next/router';
-import { ToastContainer, toast } from 'react-toastify';
+// import { useRouter } from 'next/router';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaPencilAlt, FaTimes,FaRegHandPeace } from 'react-icons/fa'
 import Link from "next/link";
 import Image from "next/image";
-import { API_URL } from "@/config/index";
+// import { API_URL } from "@/config/index";
 import Layout from "@/components/Layout";
 import styles from '@/styles/Event.module.css'
 
 
 const slug = ({ evt }) => {
   const res = evt
-  // const router = useRouter()
 
-
-
-  console.log(evt)
   return (
     <Layout>
 
@@ -95,7 +91,7 @@ export async function getServerSideProps({params : {slug}}) {
 
   const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events?populate=*&filters\[slug\][$eq]=${slug}`)
   const events = await res.json()
-  console.log(events.data[0])
+
 
   return {
     props: {

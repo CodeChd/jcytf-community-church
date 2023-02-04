@@ -18,9 +18,7 @@ export default function DashEvent({evt, handleDelete}) {
         <FaTimes/> Delete
     </a>
 
-    <Link href='/events/add'>
-                        <button className="btn-event btn-icon">Add Event</button>
-                    </Link>
+    
     </div>
   )
 }

@@ -33,7 +33,7 @@ export default function Home({ events }) {
 export async function getServerSideProps() {
 
   //fetch events
-  const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events?sort=date%3Aasc&pagination\[limit\]=3&populate=*`)
+  const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events?sort=date%3Aasc&pagination[limit]=3&populate=*`)
   const events = await res.json()
 
 
