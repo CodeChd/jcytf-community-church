@@ -4,13 +4,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaPencilAlt, FaTimes,FaRegHandPeace } from 'react-icons/fa'
 import Link from "next/link";
 import Image from "next/image";
-// import { API_URL } from "@/config/index";
+import { API_URL } from "@/config/index";
 import Layout from "@/components/Layout";
 import styles from '@/styles/Event.module.css'
 
 
 const slug = ({ evt }) => {
-  const res = evt
+
 
   return (
     <Layout>
@@ -27,22 +27,22 @@ const slug = ({ evt }) => {
         </div> */}
 
         <span>
-        {new Date (res.attributes.date).toLocaleDateString('en-US')} at {res.attributes.time}
+        {new Date (evt.attributes.date).toLocaleDateString('en-US')} at {evt.attributes.time}
         </span>
-        <h1>{res.attributes.name}</h1>
-        {res.attributes.image.data !== null ? (
+        <h1>{evt.attributes.name}</h1>
+        {evt.attributes.image.data !== null ? (
           <div className={styles.image}>
-              <Image src={res.attributes.image.data.attributes.formats.medium.url} width={960} height={600} alt="Event"/>
+              <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={960} height={600} alt="Event"/>
              </div>
         ): (<FaRegHandPeace size={40}/>) }
       </div> 
 
       <h3>Performers:</h3>
-      <p>{res.attributes.performers}</p>
+      <p>{evt.attributes.performers}</p>
       <h3>Description:</h3>
-      <p>{res.attributes.description}</p>
-      <h3>Venue: {res.attributes.venue}</h3>
-      <p>{res.attributes.address}</p>
+      <p>{evt.attributes.description}</p>
+      <h3>Venue: {evt.attributes.venue}</h3>
+      <p>{evt.attributes.address}</p>
 
 
       <Link href='/events'>
@@ -59,7 +59,7 @@ export default slug;
 
 
 // export async function getStaticPaths() {
-//   const res = await fetch(`${API_URL}/api/events`)
+//   const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events`)
 //   const events = await res.json()
 
 //   const paths = events.data.map((evt) => ({
@@ -75,7 +75,7 @@ export default slug;
 
 // export async function getStaticProps({params : {slug}}) {     
 
-//   const res = await fetch(`${API_URL}/api/events?populate=*&filters\[slug\][$eq]=${slug}`)
+//   const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events?populate=*&filters\[slug\]=${slug}`)
 //   const events = await res.json()
 //   console.log(events)
 

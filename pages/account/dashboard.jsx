@@ -45,7 +45,7 @@ export default function Dashboard({ events, token }) {
                     <h3>My Events</h3>
                     
 
-                    <Link href='/events/add'>
+                    <Link href='/add'>
                         <p className="btn-event btn-icon">Add Event</p>
                     </Link>
 
