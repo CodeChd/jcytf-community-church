@@ -1,4 +1,4 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://capstone-jcytf-ccc1.onrender.com'
+export const API_URL = 'https://capstone-jcytf-ccc1.onrender.com'
 
 export const PER_PAGE = 3   
 
