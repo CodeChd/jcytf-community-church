@@ -93,7 +93,7 @@ export default slug;
 
 export async function getServerSideProps({params : {slug}}) {     
 
-  const res = await fetch(`${API_URL}/api/events?populate=*&filters\[slug\][$eq]=${slug}`)
+  const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events?populate=*&filters\[slug\][$eq]=${slug}`)
   const events = await res.json()
   console.log(events.data[0])
 

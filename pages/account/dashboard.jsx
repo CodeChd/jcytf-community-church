@@ -64,7 +64,7 @@ export default function Dashboard({ events, token }) {
 export async function getServerSideProps({ req }) {
     const { token } = parseCookies(req)
 
-    const res = await fetch(`${API_URL}/api/events/me`, {
+    const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events/me`, {
         method: 'GET',
         headers: {
             Authorization: `Bearer ${token}`

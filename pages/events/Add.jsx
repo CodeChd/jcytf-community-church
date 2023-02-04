@@ -38,7 +38,7 @@ const AddEvents = ({token}) => {
     }
 
     // const data = {data : {...values}}
-    const res = await fetch(`${API_URL}/api/events`, {
+    const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events`, {
 
       method: 'POST',
       headers: {
