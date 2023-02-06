@@ -37,7 +37,7 @@ const slug = ({ evt }) => {
         ): (<FaRegHandPeace size={40}/>) }
       </div> 
 
-      <h3>Performers:</h3>
+      <h3>Speaker:</h3>
       <p>{evt.attributes.performers}</p>
       <h3>Description:</h3>
       <p>{evt.attributes.description}</p>
@@ -58,7 +58,7 @@ const slug = ({ evt }) => {
 export default slug;
 
 
-// export async function getStaticPaths() {
+// export async function getStaticPaths() { DEV SERVER
 //   const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events`)
 //   const events = await res.json()
 

@@ -4,7 +4,7 @@ import styles from '@/styles/Footer.module.css'
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <p>Developed by | Carl | All Star Group</p>
+            <p>Developed by | Carl Francisco</p>
 
                 <p>
                 <Link href='/about'>About</Link> 
