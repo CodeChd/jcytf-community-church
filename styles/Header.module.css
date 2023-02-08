@@ -53,6 +53,10 @@
     display: none;
 }
 
+.nav_logo{
+  margin: -2rem 0;
+}
+
 
 .btnNav{
   display: flex;

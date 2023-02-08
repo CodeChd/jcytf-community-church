@@ -21,12 +21,12 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.container}>
 
-            
-
+    
                     <Link href='/'>
-                       <Image src="/images/jcytf.png" width={68} height={60}/>
+                       <Image className={styles.nav_logo} src="/images/jcytf.png" width={68} height={60}/>
                     </Link>
               
+
 
 
                 <nav className={
