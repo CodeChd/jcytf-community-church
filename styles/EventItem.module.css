@@ -18,10 +18,12 @@
     }
 
 
-    @media (max-width: 600px){
+    @media (max-width: 675px){
             .event{
                 flex-direction: column;
                 text-align: center;
+               
+
             }
     }
 

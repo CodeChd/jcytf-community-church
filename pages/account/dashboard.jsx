@@ -4,7 +4,7 @@ import { API_URL } from "@/config/index"
 import { parseCookies } from "@/helper/index"
 import styles from '@/styles/Dashboard.module.css'
 import Link from "next/link"
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
 
 
@@ -39,10 +39,10 @@ export default function Dashboard({ events, token }) {
     return (
         <Layout title="User Dashboard">
             <div className={styles.dash}>
-                <h1>Dashboard</h1>
+                <h1>DASHBOARD</h1>
                 <div className={styles.grid}>
 
-                    <h3>My Events</h3>
+                    <h3>MY EVENTS</h3>
                     
 
                     <Link href='/add'>
@@ -51,11 +51,11 @@ export default function Dashboard({ events, token }) {
 
                 </div>
 
-
-
                 {events.map((e) => (
                     <DashEvent key={e.id} evt={e} handleDelete={delEvent} />
                 ))}
+
+
 
             </div>
         </Layout>
@@ -65,7 +65,7 @@ export default function Dashboard({ events, token }) {
 export async function getServerSideProps({ req }) {
     const { token } = parseCookies(req)
 
-    const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events/me`, {
+    const res = await fetch(`${API_URL}/api/events/me`, {
         method: 'GET',
         headers: {
             Authorization: `Bearer ${token}`

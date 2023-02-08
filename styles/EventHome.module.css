@@ -1,7 +1,7 @@
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20rem;
+    gap: 10rem;
     top: -1.5rem;
     right: -2rem;
     position: relative;

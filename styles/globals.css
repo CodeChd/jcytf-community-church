@@ -30,8 +30,8 @@ h1 {
 
 .btn {
   display: inline-block;
-  background: red;
-  color: #fff;
+  background: rgb(221, 195, 129);
+  color: #f6f4f4;
   padding: 10px 20px;
   cursor: pointer;
   border: 0;
@@ -109,3 +109,5 @@ h1 {
 .btn-icon svg {
   margin-right: 5px;
 }
+
+

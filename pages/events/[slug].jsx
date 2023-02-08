@@ -7,10 +7,13 @@ import Image from "next/image";
 import { API_URL } from "@/config/index";
 import Layout from "@/components/Layout";
 import styles from '@/styles/Event.module.css'
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive'
 
 
 const slug = ({ evt }) => {
 
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 960px)' })
 
   return (
     <Layout>
@@ -32,7 +35,14 @@ const slug = ({ evt }) => {
         <h1>{evt.attributes.name}</h1>
         {evt.attributes.image.data !== null ? (
           <div className={styles.image}>
-              <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={960} height={600} alt="Event"/>
+            {isTabletOrMobile ?
+              <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={630} height={600} alt="Event" /> 
+              
+              :
+              
+              <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={960} height={600} alt="Event" /> 
+
+            }
              </div>
         ): (<FaRegHandPeace size={40}/>) }
       </div> 
@@ -89,7 +99,7 @@ export default slug;
 
 export async function getServerSideProps({params : {slug}}) {     
 
-  const res = await fetch(`https://capstone-jcytf-ccc1.onrender.com/api/events?populate=*&filters\[slug\][$eq]=${slug}`)
+  const res = await fetch(`${API_URL}/api/events?populate=*&filters\[slug\][$eq]=${slug}`)
   const events = await res.json()
 
 

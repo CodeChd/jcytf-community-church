@@ -1,5 +1,6 @@
 .showcase{
-    min-height: 85vh;
+   min-width: 675px;
+   height: 85vh;
     width: 100%;
     background: #000 url('../public/images/john-price-RAZQiZOX3mU-unsplash.jpg') no-repeat ;
     color: whitesmoke;

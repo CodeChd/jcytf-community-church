@@ -30,7 +30,7 @@ const Layout = ({ title, keywords, description, children }) => {
 Layout.defaultProps = {
   title: 'JCYTF | Community Church',
   description: 'kingdom of god',
-  keywords: 'church, group, worships, events '
+  keywords: 'church, group, worships, prayer, events, quezon city, payatas'
 }
 
 export default Layout

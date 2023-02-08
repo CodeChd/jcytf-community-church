@@ -3,16 +3,16 @@
     background: #fff;
     color: #333;
     height: 55px;
+    min-width: 675px;
+    position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 100;
   }
 
   .container{
     display: flex;
-    position: relative;
     padding: 0 30px;
     justify-content: space-between;
-    
 
   }
 
@@ -40,18 +40,10 @@
     gap: 1rem;
   }
 
-  .btnNav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    position: relative; 
-    margin-top: 5px;
-  }
  
   
 
-  .header nav{
+  .header .nav{
     margin: 0 auto;
     position: absolute;
     left: 35%;
@@ -61,42 +53,71 @@
     display: none;
 }
 
+
+.btnNav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 5px;
+}
+
 @media  (max-width: 768px) {
-   .navbar_container_menu{
+  .header nav a {
+    margin-right: 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+
+  }
+
+
+  .btnNav{
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width: 400px;
+    list-style: none;
+    margin-top: 5px;
+    position: absolute;
+    right: 10%;
+  }
+
+
+ 
+   .navbar_container_menu, .nav{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    width: 500px;
     top: 80px;
     left: -110%;
     position: absolute;
     opacity: 1;
     transition: all 0.3s ease;
+    
   }
   .active{
-      background: #181818;
-      left: 0%;
+      background: #a39468;
+      left: 17%;
+      border: #ead67d;
       opacity: 1;
       z-index: 1;
       transition: all 0.5s ease;
   
   }
-  .header nav{
-    border-bottom: 1px solid #282828;
-    margin: 0px;
-    padding: 20px 0px;
 
+  .header ul{
+    flex-direction: column;
+    justify-content: center;
 
-}
-
-
-
+  }
   
   .navIcon{
     font-size: 30px;
         display: block;
+        position: relative;
         cursor: pointer;
-        fill: var(--yellow-main-color);
+        fill: #d2c27a;
   }
 
 }

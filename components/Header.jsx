@@ -5,6 +5,7 @@ import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa"
 import AuthContext from "@/context/AuthContext"
 import { FaBars } from "react-icons/fa"
 import { HiX } from 'react-icons/hi'
+import Image from "next/image"
 
 const Header = () => {
     const { user, logout } = useContext(AuthContext)
@@ -20,19 +21,19 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.container}>
 
-                <div>
+            
 
                     <Link href='/'>
-                        <h2>JCYTF</h2>
+                       <Image src="/images/jcytf.png" width={68} height={60}/>
                     </Link>
-                </div>
+              
 
 
-                <nav>
+                <nav className={
+              click ? `${styles.navbar_container_menu}  ${styles.active}`  :` ${styles.navbar_container_menu} `
+            }>
 
-                    <ul className={
-                        click ? `${styles.navbar_container_menu} ${styles.active}` : `${styles.navbar_container_menu_items} }`
-                    } >
+                    <ul  >
                         <li>
                             <Link href='/events'>
                                 <p> VISIT</p>
@@ -60,8 +61,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <ul className={styles.btnNav}>
-
+                <div className={styles.btnNav}>
                     {user ? (< >
 
 
@@ -85,7 +85,8 @@ const Header = () => {
                             </Link>
                         </li>
                     )}
-                </ul>
+                </div>
+
                 <div className={styles.navIcon} onClick={handleIcon}>
                     {click ? <HiX fontSize="2rem" /> : <FaBars fontSize="2rem" />}
                 </div>
