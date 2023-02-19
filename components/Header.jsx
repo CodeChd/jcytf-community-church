@@ -62,7 +62,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className={styles.btnNav}>
-                    {user ? (< >
+                    {user && (< >
 
 
                         <li>
@@ -78,13 +78,7 @@ const Header = () => {
                             </button>
                         </li>
                     </>
-                    ) : (
-                        <li>
-                            <Link href='/account/login'>
-                                <p className="btn-secondary btn-icon"><FaSignInAlt /> Login</p>
-                            </Link>
-                        </li>
-                    )}
+                    ) }
                 </div>
 
                 <div className={styles.navIcon} onClick={handleIcon}>
