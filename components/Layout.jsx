@@ -29,7 +29,7 @@ const Layout = ({ title, keywords, description, children }) => {
 
 Layout.defaultProps = {
   title: 'JCYTF | Community Church',
-  description: 'kingdom of god',  
+  description: 'Church in Quezon City, Payatas',  
   keywords: 'church, group, worships, prayer, events, quezon city, payatas'
 }
 

@@ -8,7 +8,6 @@ export default function Home({ events }) {
 
 
 
-  console.log(events, "index")
   return (
     <Layout>
 

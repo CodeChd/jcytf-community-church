@@ -1,7 +1,7 @@
 // import { useRouter } from 'next/router';
 // import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaPencilAlt, FaTimes,FaRegHandPeace } from 'react-icons/fa'
+import { FaPencilAlt, FaTimes,FaPrayingHands } from 'react-icons/fa'
 import Link from "next/link";
 import Image from "next/image";
 import { API_URL } from "@/config/index";
@@ -12,8 +12,9 @@ import { useMediaQuery } from 'react-responsive'
 
 
 const slug = ({ evt }) => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 960px)' })
+ 
 
   return (
     <Layout>
@@ -36,7 +37,7 @@ const slug = ({ evt }) => {
         {evt.attributes.image.data !== null ? (
           <div className={styles.image}>
             {isTabletOrMobile ?
-              <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={630} height={600} alt="Event" /> 
+              <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={660} height={600} alt="Event" /> 
               
               :
               
@@ -44,7 +45,7 @@ const slug = ({ evt }) => {
 
             }
              </div>
-        ): (<FaRegHandPeace size={40}/>) }
+        ): (<FaPrayingHands size={45}/>) }
       </div> 
 
       <h3>Speaker:</h3>

@@ -21,17 +21,19 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.container}>
 
-    
+                <div>
                     <Link href='/'>
-                       <Image className={styles.nav_logo} src="/images/jcytf.png" width={68} height={60}/>
+                        <Image className={styles.nav_logo} src="/images/jcytf.png" width={68} height={60} />
                     </Link>
-              
+
+
+                </div>
 
 
 
                 <nav className={
-              click ? `${styles.navbar_container_menu}  ${styles.active}`  :` ${styles.navbar_container_menu} `
-            }>
+                    click ? `${styles.navbar_container_menu}  ${styles.active}` : ` ${styles.navbar_container_menu} `
+                }>
 
                     <ul  >
                         <li>
@@ -59,10 +61,8 @@ const Header = () => {
                                 <p>MINISTRY</p>
                             </Link>
                         </li>
-                    </ul>
-                </nav>
-                <div className={styles.btnNav}>
-                    {user && (< >
+
+                    {user && (<div className={styles.btn_nav} >
 
 
                         <li>
@@ -77,14 +77,21 @@ const Header = () => {
 
                             </button>
                         </li>
-                    </>
-                    ) }
-                </div>
+                    </div>
+                    )}
+              
+                    </ul>
+                </nav>
 
-                <div className={styles.navIcon} onClick={handleIcon}>
+
+                 <div className={styles.navIcon} onClick={handleIcon}>
                     {click ? <HiX fontSize="2rem" /> : <FaBars fontSize="2rem" />}
                 </div>
             </div>
+             
+
+                
+               
         </header>
     )
 }

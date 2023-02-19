@@ -16,17 +16,15 @@
     .info{
         flex: 2;
     }
-
+    
+    .info{
+        margin-bottom: 20px;
+    }
 
     @media (max-width: 675px){
             .event{
                 flex-direction: column;
                 text-align: center;
                
-
             }
-    }
-
-    .info{
-        margin-bottom: 20px;
     }

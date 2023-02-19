@@ -1,28 +1,23 @@
 .header {
-    margin: 1rem 0;
     background: #fff;
     color: #333;
-    height: 55px;
+    height: 4rem;
+    margin: 1rem 0;
     min-width: 675px;
     position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 100;
   }
 
   .container{
     display: flex;
-    padding: 0 30px;
     justify-content: space-between;
+    padding-inline: 1em ;
 
   }
 
   .container h2{
     margin-top: 3px;
   }
-  
-
-
-
   
   .header a {
     color: #333;
@@ -36,37 +31,26 @@
   
   .header ul {
     display: flex;
+    justify-content: center;
     list-style: none;
     gap: 1rem;
   }
 
- 
   
-
-  .header .nav{
-    margin: 0 auto;
-    position: absolute;
-    left: 35%;
-  }
-
   .navIcon{
     display: none;
 }
 
-.nav_logo{
-  margin: -2rem 0;
-}
 
-
-.btnNav{
+.btn_nav{
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: end;
   list-style: none;
-  margin-top: 5px;
 }
 
-@media  (max-width: 768px) {
+@media  (max-width: 800px )  {
   .header nav a {
     margin-right: 20px;
     text-align: center;
@@ -76,14 +60,12 @@
   }
 
 
-  .btnNav{
+  .btn_nav{
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     list-style: none;
-    margin-top: 5px;
-    position: absolute;
-    right: 10%;
   }
 
 
