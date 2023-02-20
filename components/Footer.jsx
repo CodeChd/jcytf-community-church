@@ -16,7 +16,7 @@ const Footer = () => {
                         <p className="primary-logo text-white fs-700"> JCYTF<span className="d-block secondary-logo">Community Church</span></p>
                     </div>
 
-                    <div>
+                    <div className="address-container">
 
 
                         <p className="text-white address"> Madjaas Street Group 2, Area B, Quezon City, 1119 Metro Manila</p>
@@ -77,8 +77,6 @@ const Footer = () => {
 
             </div>
             <div className="origin  text-left">
-
-
                 <h3 className="container fs-400">DEVELOPED BY CARL FRANCISCO</h3>
             </div>
 

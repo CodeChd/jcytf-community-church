@@ -264,8 +264,9 @@ h1 {
 }
 
 
-.address {
-  max-width: 29ch;
+.col-1 .address-container {
+  max-width: 33ch;
+  text-align: left;
 }
 
 
