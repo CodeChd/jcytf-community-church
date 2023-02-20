@@ -1,8 +1,8 @@
 .footer{
-    margin: 100px 0 40px;
     text-align: center;
     min-width: 675px;
-    height: 100%;
+    background-color: #262626dd;
+    display: grid;
 }
 
 .footer p{
