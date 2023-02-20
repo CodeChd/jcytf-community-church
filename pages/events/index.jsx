@@ -20,7 +20,10 @@ export default function EventsPage({ events, total, page }) {
       <div className={styles.grid}>
 
       <h1>Events</h1>
+      <div>
+
       {router.pathname === '/events' && 'events/search' && <Search/>}
+      </div>
 
       </div>
       <div className="center">

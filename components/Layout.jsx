@@ -13,6 +13,7 @@ const Layout = ({ title, keywords, description, children }) => {
         <title>{title}</title>
         <meta name='description' content={description} /> 
         <meta name='keywords' content={keywords} />
+        <link rel="icon" type="image/png" sizes="32x32" href="/jcytf-website-favicon-color.png"/>
       </Head>
 
 
