@@ -12,7 +12,7 @@ export default function Home({ events }) {
     <Layout>
 
 
-      <h1>Upcoming Events</h1>
+      <h1 className=" ft-home uppercase">Featured Events</h1>
       <div className='center'>
       {events.data.length === 0 && <h3>No events to show!</h3>}
       </div>

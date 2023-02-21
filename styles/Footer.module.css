@@ -1,8 +1,6 @@
 .footer{
     text-align: center;
-    min-width: 675px;
     background-color: #262626dd;
-    display: grid;
 }
 
 .footer p{

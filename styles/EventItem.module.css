@@ -4,6 +4,7 @@
         align-items:center;
         margin: 20px 0;
         padding: 13px;
+        min-height: 12rem;
         box-shadow: 2px 3px 5px rgba(0,0,0,0.1);
     }
 

@@ -12,7 +12,7 @@ export default function EventItem({ evt }) {
         <div className={styles.event}>
             <div className={styles.img}>
                 {
-                evt.attributes.image.data === null ?( <Image src={'/images/event-default.png'} width={170} height={100} alt="Event" />) 
+                evt.attributes.image.data === null ?( <Image src={'/images/event-default.svg'} width={170} height={150} alt="Event" />) 
                 :
                 ( <Image src={evt.attributes.image.data.attributes.formats.thumbnail.url} width={170} height={100} alt="Event" />)
                 

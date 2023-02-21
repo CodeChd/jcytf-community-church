@@ -14,7 +14,6 @@
       --pale-yellow: #fde09c;
 
       /* font-sizes */
-      --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
       --fs-800: 3.5rem;
       --fs-700: 1.5rem;
       --fs-600: 1rem;
@@ -36,7 +35,7 @@
 html,
 body {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.8;
+  line-height: 1.6 ;
 }
 
 a {
@@ -136,38 +135,6 @@ h1 {
 
 
 /* utitlity class footer */
-.container{
-  padding-inline: 2em;
-  margin-inline: 2em;
-}
-
-.flex{
-  display: flex;
-  gap: var(--gap, 1rem);
-}
-
-.grid{
-  display: grid;
-  gap: var(--gap, 1rem);
-}
-
-.d-block{
-  display: block;
-}
-
-
-
-.orange{
-  color: var(--orange);
-}
-
-.pale_yellow{
-  color: var(--pale-yellow);
-}
-
-.text-left{
-  text-align: left;
-}
 
 /* colors */
 .bg-dark { background-color: hsl( var(--clr-dark) );}
@@ -207,98 +174,136 @@ h1 {
 .fs-600 {
   line-height: 1.1;
 }
-/* utitlity class footer */
 
 
 
-/* classes */
-
-
-.grid-container{
-  grid-template-columns: clamp(2rem,7w, 1fr) ;
-  --gap: 6rem;
- 
+.page{
+  min-height: 80vh;
 }
 
-.grid-container{
-  padding: 4rem;
+.container{
+  padding-inline: 2em;
+  margin-inline: 2em;
 }
 
+.flex{
+  display: flex;
+  gap: var(--gap, 1rem);
+}
 
+.grid{
+  display: grid;
+  gap: var(--gap, 1rem);
+}
 
-.col-2{
+.d-block{
+  display: block;
+}
+
+.text-left{
   text-align: left;
 }
 
-.col-2 .Sunday-Service{
-  --gap: .9rem; 
+.orange{
+  color: var(--orange);
 }
 
-.col-3{
-  max-width: 50ch;
-  text-align: left;
+.pale_yellow{
+  color: var(--pale-yellow);
 }
 
-.origin{
-  border-top: 1px solid rgb(187, 187, 187);
-  padding: 10px;
-}
-
-.origin > h3{
-  color: hsl(var(--clr-white) / .94)
-
-}
-
-.footer-logo{
-  --gap: .5rem
-}
-
-
-.footer-logo .primary-logo{
-  font-size: var(--fs-800);
-  font-weight: 500  ;
-}
-
-.footer-logo .primary-logo > .secondary-logo{
-  font-size: 1rem;
-}
-
-
-.col-1 .address-container {
-  max-width: 33ch;
-  text-align: left;
-}
-
-
-.btn-footer{
+.about-btn{
   margin-top: 1rem;
   border-radius: 10px;
   text-transform: uppercase;
   aspect-ratio: 1;
+  color: hsl( var(--clr-dark) );
   width: 100px;
   height:30px;
   border: none;
   background-color: #fde09c;
 }
 
-.btn-footer a{
-  color: var(--clr-dark);
+/* utitlity class footer */
+
+
+/* elements */
+
+.img-container .image{
+  max-width: 25ch;
 }
 
 
-@media (max-width: 35em) {
-  .col-1,
-  .col-2,
-  .col-3{
-    padding-inline: 2rem;
-  }
+
+.origin{
+  padding: .75rem;
+  margin-top: 1rem;
+  border-top: 2px solid ;
+  border-color: hsl( var(--clr-white) / .70);
 }
 
-
-@media (min-width: 45em){
+@media  (max-width: 40em){
   .grid-container{
-    grid-template-columns: minmax(2rem, 1fr) minmax(0, 20rem) minmax(2rem, 1fr);
-    --gap: 7rem;
-    place-items: center;
+    grid-template-columns: 1fr;
+    padding-inline: clamp(.76rem, 5vw, 1.5rem);
   }
+
+  
 }
+
+
+@media (min-width: 48em){
+
+  .grid-container{
+    grid-template-columns: 1fr minmax(1rem, 20rem) 1fr;
+    padding-inline: clamp(.76rem, 5vw, 1.5rem);
+  }
+
+  .grid-container > *:first-child{
+    grid-column: 1;
+  }
+
+  .grid-container > *:last-child{
+    grid-column: 3;
+  }
+
+  .footer-grid-home{
+    padding-top: 2rem;
+  }
+
+  .img-container .image{
+    max-width: 45ch;
+  }
+
+  .col-1{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .col-1 .address{
+    flex-direction: column;
+    max-width: 35ch;
+    text-align: center;
+  }
+
+  .col-2{
+    text-align: left;
+    flex-direction: column;
+    min-width: 30ch
+  }
+
+  .col-2 .Sunday-Service{
+    flex-direction: column;
+  }
+
+
+
+}
+
+
+
+ 
+
+
+

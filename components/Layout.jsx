@@ -8,23 +8,24 @@ import { useRouter } from "next/router"
 const Layout = ({ title, keywords, description, children }) => {
   const router = useRouter()
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta name='description' content={description} /> 
         <meta name='keywords' content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <link rel="icon" type="image/png" sizes="32x32" href="/jcytf-website-favicon-color.png"/>
       </Head>
 
 
       <Header />
       {router.pathname === '/' && <Showcase />}
-      <div className={styles.container}>
+      <div className={`${styles.container} page`}>
 
         {children}
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
