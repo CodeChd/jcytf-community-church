@@ -19,7 +19,11 @@ export default function Dashboard({ events, token }) {
     useEffect(() => {
         if (!user) {
             router.push('/account/enter');
+          }else if(user){
+            router.push('/account/dashboard')
           }
+
+
 
     });
 
@@ -67,7 +71,10 @@ export default function Dashboard({ events, token }) {
 
                 </div>
 
-                {events.map((e) => (
+                {events &&
+                
+                
+                events.map((e) => (
                     <DashEvent key={e.id} evt={e} handleDelete={delEvent} />
                 ))}
 
