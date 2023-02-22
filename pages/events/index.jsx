@@ -17,7 +17,7 @@ export default function EventsPage({ events, total, page }) {
 
   return (
     <Layout>
-      <div className={styles.grid}>
+      <div className={styles.flex}>
 
       <h1>Events</h1>
       <div>
