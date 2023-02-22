@@ -1,20 +1,21 @@
 // import { useRouter } from 'next/router';
 // import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaPencilAlt, FaTimes,FaPrayingHands } from 'react-icons/fa'
+import { FaPencilAlt, FaTimes, FaPrayingHands } from 'react-icons/fa'
 import Link from "next/link";
 import Image from "next/image";
 import { API_URL } from "@/config/index";
 import Layout from "@/components/Layout";
 import styles from '@/styles/Event.module.css'
-import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive'
 
-
 const slug = ({ evt }) => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
- 
+  const isTabletOrMobile = async () => useMediaQuery({ query: '(max-width: 900px)' })
+
+
+
+
 
   return (
     <Layout>
@@ -31,22 +32,22 @@ const slug = ({ evt }) => {
         </div> */}
 
         <span>
-        {new Date (evt.attributes.date).toLocaleDateString('en-US')} at {evt.attributes.time}
+          {new Date(evt.attributes.date).toLocaleDateString('en-US')} at {evt.attributes.time}
         </span>
         <h1>{evt.attributes.name}</h1>
         {evt.attributes.image.data !== null ? (
           <div className={styles.image}>
-            {isTabletOrMobile ?
-              <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={660} height={600} alt="Event" /> 
-              
-              :
-              
-              <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={960} height={600} alt="Event" /> 
+            {isTabletOrMobile && (<div className="img-container">
+              <div>
 
+                <Image className='img' src={evt.attributes.image.data.attributes.formats.large.url}  width={860} height={500}  alt="image" />
+              </div>
+            </div>)
             }
-             </div>
-        ): (<FaPrayingHands size={45}/>) }
-      </div> 
+          </div>
+        ) : (<FaPrayingHands size={45} />)
+        }
+      </div>
 
       <h3>Speaker:</h3>
       <p>{evt.attributes.performers}</p>
@@ -98,7 +99,7 @@ export default slug;
 //   }
 // }
 
-export async function getServerSideProps({params : {slug}}) {     
+export async function getServerSideProps({ params: { slug } }) {
 
   const res = await fetch(`${API_URL}/api/events?populate=*&filters\[slug\][$eq]=${slug}`)
   const events = await res.json()

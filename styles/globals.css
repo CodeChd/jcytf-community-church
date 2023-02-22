@@ -123,4 +123,17 @@ h1 {
  
 
 
+.img-container{
+  width: 100%;
+}
 
+.img-container > div{
+  height: unset !important;
+}
+
+.img-container .img{
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
