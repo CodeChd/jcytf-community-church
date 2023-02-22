@@ -6,7 +6,7 @@ import { parseCookies } from "@/helper/index"
 import styles from '@/styles/Dashboard.module.css'
 import Link from "next/link"
 import { useRouter } from "next/router";
-import { useContext, useEffect } from "react"
+import { useCallback, useContext, useEffect } from "react"
 
 
 
@@ -16,18 +16,15 @@ export default function Dashboard({ events, token }) {
 
     const { user } = useContext(AuthContext);
 
-    useEffect(() => {
+    useCallback(() => {
         if (!user) {
             router.push('/account/enter');
          }
          
-
-         setTimeout(() =>{
              if(user){
                 router.push('/account/dashboard')
               }
 
-         },2500)
 
 
 
