@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
 
   //loguser
   const login = async ({ email: identifier, password }) => {
-    console.log({ identifier, password });
+    // console.log({ identifier, password });
 
     const res = await fetch(`${NEXT_URL}/api/login`, {
       method: "POST",
@@ -85,8 +85,17 @@ export const AuthProvider = ({ children }) => {
 
     if (res.ok) {
       setUser(data.user);
-    } else {
+    }  else {
+
+      //auth for manual routing
       setUser(null);
+      if (
+        router.pathname === '/account/dashboard' ||
+        router.pathname === '/add' ||
+        router.pathname === '/events/edit/[id]'
+      ) {
+        router.push('/account/enter');
+      }
     }
   };
 

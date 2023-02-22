@@ -1,10 +1,12 @@
 import DashEvent from "@/components/DashEvent"
 import Layout from "@/components/Layout"
 import { API_URL } from "@/config/index"
+import AuthContext from "@/context/AuthContext"
 import { parseCookies } from "@/helper/index"
 import styles from '@/styles/Dashboard.module.css'
 import Link from "next/link"
 import { useRouter } from "next/router";
+import { useContext, useEffect } from "react"
 
 
 
@@ -12,7 +14,21 @@ import { useRouter } from "next/router";
 export default function Dashboard({ events, token }) {
     const router = useRouter()
 
-    
+    const { user } = useContext(AuthContext);
+
+    useEffect(() => {
+        if (!user) {
+            router.push('/account/enter');
+          }
+
+    });
+
+    if (!user) {
+        return null;
+    };
+
+
+
 
     const delEvent = async (id) => {
         if (confirm('Are you sure?')) {
@@ -43,7 +59,7 @@ export default function Dashboard({ events, token }) {
                 <div className={styles.grid}>
 
                     <h3>MY EVENTS</h3>
-                    
+
 
                     <Link href='/add'>
                         <p className="btn-event btn-icon">Add Event</p>
@@ -60,20 +76,36 @@ export default function Dashboard({ events, token }) {
             </div>
         </Layout>
     )
-}
 
+}
 export async function getServerSideProps({ req }) {
     const { token } = parseCookies(req)
 
-    const res = await fetch(`${API_URL}/api/events/me`, {
-        method: 'GET',
-        headers: {
-            Authorization: `Bearer ${token}`
-        }
-    })
-    const events = await res.json()
 
-    return {
-        props: { events, token }
+
+    if (token) {
+
+
+
+        const res = await fetch(`${API_URL}/api/events/me`, {
+            method: 'GET',
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+        const events = await res.json()
+
+        return {
+            props: { events, token }
+
+        }
     }
+
+
+    else {
+
+        return {
+            props: {},
+        };
+    };
 }

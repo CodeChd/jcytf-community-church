@@ -2,13 +2,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Layout from "@/components/Layout"
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Link from "next/link"
 import { API_URL } from "@/config/index" 
 import styles from '@/styles/Form.module.css'
 import { parseCookies } from '@/helper/index';
-
+import AuthContext from '@/context/AuthContext';
 const AddEvents = ({token}) => {
+  const router = useRouter()
   const [values, setValue] = useState({
     name: '',
     performers: '',
@@ -19,11 +20,22 @@ const AddEvents = ({token}) => {
     description: '',
   })
 
+  const { user } = useContext(AuthContext);
+
+  useEffect(() => {
+      if (!user) {
+          router.push('/account/enter');
+        }
+
+  });
+
+  if (!user) {
+      return null;
+  };
 
 
 
 
-  const router = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -134,8 +146,18 @@ export default AddEvents
 
 export async function getServerSideProps ({req}) {
   const {token} = parseCookies(req)
-console.log(token)
+
+  if(token){
+
+  
   return{
     props : {token}
   }
+}
+else {
+
+  return {
+      props: {},
+  };
+};
 }

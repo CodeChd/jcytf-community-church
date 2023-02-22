@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from "next/router"
 import Layout from "@/components/Layout"
 import Modal from "@/components/Modal"
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Link from "next/link"
 import { API_URL } from "@/config/index"
 import { formatDateInput } from '@/utils/fomatDate'
@@ -12,9 +12,12 @@ import styles from '@/styles/Form.module.css'
 import Image from 'next/image';
 import { FaImage } from 'react-icons/fa';
 import { parseCookies } from '@/helper/index';
+import AuthContext from '@/context/AuthContext';
+
 
 
 const EditEvents = ({ Edata ,token}) => {
+
     const [values, setValue] = useState({
         name: Edata.attributes.name,
         performers: Edata.attributes.performers,
@@ -24,6 +27,25 @@ const EditEvents = ({ Edata ,token}) => {
         time: Edata.attributes.time,
         description: Edata.attributes.description,
     })
+    
+    const router = useRouter()
+  const { user } = useContext(AuthContext);
+
+
+    useEffect(() => {
+        if (!user) {
+            router.push('/account/enter');
+          }
+  
+    });
+  
+    if (!user) {
+        return null;
+    };
+  
+  
+  
+    
 
 
     const [imagePreview, setImagePreview] = useState(
@@ -34,7 +56,6 @@ const EditEvents = ({ Edata ,token}) => {
     const [showModal, setModal] = useState(false)
 
 
-    const router = useRouter()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -175,15 +196,28 @@ const EditEvents = ({ Edata ,token}) => {
 export default EditEvents
 
 export async function getServerSideProps({ params: { id }, req }) {
+    const {token} = parseCookies(req)
+
     const res = await fetch(`${API_URL}/api/events?populate=*&filters\[id\]=${id}`)
     const Edata = await res.json()
+    if(token)
+    {
 
-    const {token} = parseCookies(req)
 
     return {
         props: {
             Edata: Edata.data[0],
             token
         }
-    }
+    } 
+}
+    else {
+
+        return {
+            props: {
+                Edata: Edata.data[0],
+                token: token || ""
+            },
+        };
+    };
 }
