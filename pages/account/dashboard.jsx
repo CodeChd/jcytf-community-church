@@ -27,7 +27,7 @@ export default function Dashboard({ events, token }) {
                 router.push('/account/dashboard')
               }
 
-         },1000)
+         },2500)
 
 
 
