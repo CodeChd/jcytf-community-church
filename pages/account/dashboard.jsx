@@ -19,9 +19,15 @@ export default function Dashboard({ events, token }) {
     useEffect(() => {
         if (!user) {
             router.push('/account/enter');
-          }else if(user){
-            router.push('/account/dashboard')
-          }
+         }
+         
+
+         setTimeout(() =>{
+             if(user){
+                router.push('/account/dashboard')
+              }
+
+         },1000)
 
 
 
