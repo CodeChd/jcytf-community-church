@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from '@/styles/Footer.module.css'
-import Image from "next/image"
+import {FaLandmark, FaPhoneAlt, FaEnvelope} from 'react-icons/fa'
 
 const Footer = () => {
     return (
@@ -16,7 +16,7 @@ const Footer = () => {
 
                     </div>
 
-                    <p className="text-white address fs-300 "> Madjaas Street Group 2, Area B, Quezon City, 1119 Metro Manila</p>
+                    <p className="text-white address fs-300 "><FaLandmark/> <span className="landmark">Madjaas Street Group 2, Area B, Quezon City, 1119 Metro Manila</span> </p>
 
                 </div>
 
@@ -30,8 +30,8 @@ const Footer = () => {
                     </div>
 
                     <div className="Sunday-Service">
-                        <h3 className="orange fs-600">SUNDAY SERVICE</h3>
-                        <div className="flex" >
+                        <h3 className="orange fs-700">Sunday Service</h3>
+                        <div className="service flex" >
 
                             <div className="S1">
                                 <p className="text-white">
@@ -64,9 +64,9 @@ const Footer = () => {
                 </div>
 
                 <div className="col-3">
-                    <h2 className="orange fs-700 ">Contact Us</h2>
-                    <p className="text-white fs-300">0997 574 4318</p>
-                    <p className="text-white fs-300">heraldoednas@gmail.com</p>
+                    <h2 className="orange fs-700 ">  Contact Us</h2>
+                    <p className="text-white fs-300"> <FaPhoneAlt/> <span className="landmark">0997 574 4318</span> </p>
+                    <p className="text-white fs-300 "> <FaEnvelope/> <span className="landmark">heraldoednas@gmail.com</span> </p>
                 </div>
 
 
