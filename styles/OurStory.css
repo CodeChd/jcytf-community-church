@@ -1,0 +1,150 @@
+
+:root{
+
+    /* colors */
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+
+    
+    --orange: #e0985a;
+    --pale-yellow: #fde09c;
+
+    /* font-sizes */
+    --fsi-800: 3.5rem;
+    --fsi-700: 2.5rem;
+    --fsi-600: 1rem;
+    --fsi-500: 1rem;
+    --fsi-400: 0.9375rem;
+    --fsi-300: 1rem;
+    --fsi-200: 0.875rem;
+
+}
+
+@media (max-width: 35em) {
+    :root {
+        --fsi-800: 3.2rem;
+        --fsi-700: 1.3rem;
+        --fsi-600: 1.5rem;
+        --fsi-500: 1.25rem;
+        --fsi-400: 1rem;
+    }
+}
+
+
+@media (min-width: 35em) {
+    :root {
+        --fsi-800: 5rem;
+        --fsi-700: 1.3rem;
+        --fsi-600: 1.5rem;
+        --fsi-500: 1.25rem;
+        --fsi-400: 1rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fsi-800: 6.25rem;
+        --fsi-700: 4rem;
+        --fsi-600: 2rem;
+        --fsi-500: 1.75rem;
+        --fsi-400: 1.125rem;
+    }
+}
+
+
+
+
+
+
+/* colors */
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
+
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fsi-900 { font-size: var(--fsi-900); }
+.fsi-800 { font-size: var(--fsi-800); }
+.fsi-700 { font-size: var(--fsi-700); }
+.fsi-600 { font-size: var(--fsi-600); }
+.fsi-500 { font-size: var(--fsi-500); }
+.fsi-400 { font-size: var(--fsi-400); }
+.fsi-300 { font-size: var(--fsi-300); }
+.fsi-200 { font-size: var(--fsi-200); }
+
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+.wrapper{
+    padding: 5rem;
+}
+
+.content{
+    max-width: 40rem;
+}
+.content div{
+    position: relative;
+}
+
+.content div h1{
+    margin: 0;
+}
+
+.content hr::after{
+        content: '';
+        width: 50vw;
+        height: 2px;
+        background: #575757;
+        position: absolute;
+        top: 98%;
+        right: 0;
+}
+
+
+.story-ch{
+    max-width: 60ch;
+}
+
+.readmore{
+    display: flex;
+}
+
+.readmore .btn-readmore{
+    margin: 0;
+    min-width: 170px;
+    padding: 15px 15px; 
+    margin: 20px 10px 0 0;
+    text-align: center;
+    background: var(--orange);
+}
+
+.wrapper .imgs{
+    flex: 0 0 40%;
+    background: url("/images/our-story.jpg") center center / cover no-repeat;
+    margin-left: 25%;
+    width: 30rem;
+    height: 30rem;
+   
+}

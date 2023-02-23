@@ -32,7 +32,7 @@ const slug = ({ evt }) => {
         </div> */}
 
         <span>
-          {new Date(evt.attributes.date).toLocaleDateString('en-US')} at {evt.attributes.time}
+          {new Date(evt.attributes.date).toLocaleDateString('en-US')} AT {evt.attributes.time}
         </span>
         <h1>{evt.attributes.name}</h1>
         {evt.attributes.image.data !== null ? (

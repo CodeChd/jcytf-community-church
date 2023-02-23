@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from '@/styles/Footer.module.css'
-import {FaLandmark, FaPhoneAlt, FaEnvelope} from 'react-icons/fa'
+import {FaLandmark, FaPhoneAlt, FaEnvelope, FaFacebook} from 'react-icons/fa'
 
 const Footer = () => {
     return (
@@ -64,9 +64,14 @@ const Footer = () => {
                 </div>
 
                 <div className="col-3">
-                    <h2 className="orange fs-700 ">  Contact Us</h2>
-                    <p className="text-white fs-300"> <FaPhoneAlt/> <span className="landmark">0997 574 4318</span> </p>
-                    <p className="text-white fs-300 "> <FaEnvelope/> <span className="landmark">heraldoednas@gmail.com</span> </p>
+                    <div className="social">
+
+                    <h2 className="orange fs-700 "> Contact Us</h2>
+                    <p className="text-white fs-300"> <FaPhoneAlt/> <span className="landmark1">0997 574 4318</span> </p>
+                    <p className="text-white fs-300 "> <FaEnvelope/> <span className="landmark2">heraldoednas@gmail.com</span> </p>
+                    <p className="text-white fs-300 "> <FaFacebook/> <span className="landmark3">jcytfchurchpayatas</span> </p>
+                    </div>
+                    
                 </div>
 
 

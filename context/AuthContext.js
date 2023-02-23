@@ -40,6 +40,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   //loguser
+  
   const login = async ({ email: identifier, password }) => {
     // console.log({ identifier, password });
 
@@ -78,9 +79,9 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  //if login
+  //if login 
   const checkUserLoggedIn = async (user) => {
-    const res = await fetch(`${NEXT_URL}/api/user`);
+    const res = await fetch(`${NEXT_URL}/api/user`); 
     const data = await res.json();
 
     if (res.ok) {

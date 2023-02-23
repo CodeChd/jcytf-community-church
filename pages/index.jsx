@@ -1,7 +1,10 @@
 import EventItem from "@/components/EventItem";
 import Layout from "@/components/Layout";
+import OurStory from "@/components/OurStory";
+import Quote from "@/components/Quote";
 import { API_URL } from '@/config/index';
 import Link from "next/link";
+
 
 
 export default function Home({ events }) {
@@ -11,7 +14,8 @@ export default function Home({ events }) {
   return (
     <Layout>
 
-
+      <OurStory/>
+      <Quote/>
       <h1 className=" ft-home uppercase">Featured Events</h1>
       <div className='center'>
       {events.data.length === 0 && <h3>No events to show!</h3>}

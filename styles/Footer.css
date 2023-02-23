@@ -264,14 +264,14 @@
   }
 
   .col-3{
-    max-width: 100%;
+    max-width: 99%;
   }
 
   
 }
 
 
-@media (min-width: 820px){
+@media (min-width: 820.999px){
 
   .grid-container{
     grid-template-columns: minmax(1rem, 33rem) minmax(1rem,15rem) minmax(1rem, 33rem);
@@ -326,6 +326,16 @@
   .col-2 .service{
     gap: .75rem;
   }
+
+  .col-3{
+    display: flex;
+    justify-content: center;
+  }
+
+  .col-3 > .social{
+    text-align: left;
+  }
+
 
 
 }
