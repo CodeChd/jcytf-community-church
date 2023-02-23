@@ -1,10 +1,59 @@
 .inner-container{
     display: flex;
-    padding: 5% 1%;
+    padding: 0 7%;
     position: relative;
-    min-height: 70vh;
-    z-index: 1;
+    min-height: 50vh;
+    align-items: center;
+}
 
+
+
+.content-quote{
+    margin-left: -40px;
+    z-index: 1;
+}
+
+
+.inner{
+    background: hsl(0, 0%, 25%);
+    padding: 80px 0 80px 80px;
+    position: relative; 
+
+}
+
+.inner::after{
+    content: "";
+    width: 51.999vw;
+    background: hsl(0, 0%, 25%);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.inner .hr{
+    position: relative;
+    overflow: visible;
+    background-color: rgb(255, 255, 255);
+}
+
+.inner hr::after{
+    content: "";
+    width: 46.30vw;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: -.998px;
+    left:0;
+    right: 0;
+    z-index: 1;
+}
+
+.quote{
+    margin-top: 2rem;
+    line-height: 1.8;
 }
 
 .img-quote{
@@ -16,29 +65,3 @@
     z-index: 2;
 }
 
-
-.inner{
-    padding: 80px 0 80px 80px;
-    position: relative; 
-}
-
-.inner::after{
-    content: "";
-    width: 44.50vw;
-    background: hsl(0, 0%, 15%, 0.867 );
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    left: 40px;
-    z-index: -1;
-}
-
-.inner hr:after{
-    content: "";
-    background: white;
-    height: 2px;
-    left: 40px;
-    right: 0;
-    position: absolute;
-}
