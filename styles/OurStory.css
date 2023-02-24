@@ -24,7 +24,7 @@
 @media (max-width: 35em) {
     :root {
         --fsi-800: 3.2rem;
-        --fsi-700: 1.3rem;
+        --fsi-700: 2rem;
         --fsi-600: 1.5rem;
         --fsi-500: 1.25rem;
         --fsi-400: 1rem;
@@ -35,7 +35,7 @@
 @media (min-width: 35em) {
     :root {
         --fsi-800: 5rem;
-        --fsi-700: 1.3rem;
+        --fsi-700: 2.5rem;
         --fsi-600: 1.5rem;
         --fsi-500: 1.25rem;
         --fsi-400: 1rem;
@@ -46,7 +46,7 @@
     :root {
         /* font-sizes */
         --fsi-800: 6.25rem;
-        --fsi-700: 4rem;
+        --fsi-700: 3rem;
         --fsi-600: 2rem;
         --fsi-500: 1.75rem;
         --fsi-400: 1.125rem;
@@ -99,11 +99,17 @@
 
 .wrapper{
     padding: 5rem;
+     min-height: 90vh;
+
+   
 }
 
-.content{
-    max-width: 40rem;
+.content > div{
+    flex: 0 0 50%;
 }
+
+
+
 .content div{
     position: relative;
 }
@@ -112,14 +118,21 @@
     margin: 0;
 }
 
+.content hr{
+
+    background: #262626;
+
+}
+
 .content hr::after{
         content: '';
         width: 50vw;
         height: 2px;
-        background: #575757;
+        background:#343434;
         position: absolute;
         top: 98%;
         right: 0;
+        
 }
 
 
@@ -140,11 +153,85 @@
     background: var(--orange);
 }
 
-.wrapper .imgs{
-    flex: 0 0 40%;
-    background: url("/images/our-story.jpg") center center / cover no-repeat;
-    margin-left: 25%;
-    width: 30rem;
-    height: 30rem;
-   
+@media(max-width: 560px){
+    .wrapper{
+        padding: 3rem;
+        flex-flow: column wrap;
+    
+       
+    }
+    .content{
+        order: 2;
+    }
+
+    .content hr::after{
+        display: none;
+        
+}
+
+
+    .image-container{
+        order: 1;
+    }
+
+    .wrapper .imgs{
+        flex: 0 0 40%;
+        background: url("/images/our-story.jpg") center center / cover no-repeat;
+        width: 100%;
+        height: 20rem;
+       
+    }
+}
+
+
+@media (min-width: 560px) and (max-width: 767px){
+
+    .wrapper{
+        padding: 5rem;
+        flex-flow: column wrap;
+    
+       
+    }
+    .content{
+        order: 2;
+    }
+
+    .content hr::after{
+        display: none;
+        
+}
+
+
+    .image-container{
+        order: 1;
+    }
+
+    .wrapper .imgs{
+        flex: 0 0 40%;
+        background: url("/images/our-story.jpg") center center / cover no-repeat;
+        width: 100%;
+        height: 30rem;
+       
+    }
+    
+
+}
+
+
+@media (min-width: 768px){
+
+    .q-head{
+       text-align: left;
+    }
+
+
+
+    .wrapper .imgs{
+        flex: 0 0 40%;
+        background: url("/images/our-story.jpg") center center / cover no-repeat;
+        margin-left: clamp(2rem, 7vw, 8rem);
+        width: clamp(25rem, 3vw, 30rem);
+        height: 30rem;
+       
+    }
 }

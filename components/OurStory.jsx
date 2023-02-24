@@ -8,18 +8,18 @@ export default function OurStory() {
             <div className="wrapper flex">
 
                 <div className="content ">
-                    <div>
+                    <div  className="fsi-700 q-box">
                         <motion.h1
                             whileInView="visible"
                             initial="hidden"
                             viewport={{ once: true }}
                             transition={{ duration: 0.99 }}
                             variants={{
-                                hidden: { opacity: 0, x: 0 },
-                                visible: { opacity: 1, x: 50 }
+                                hidden: { opacity: 0, x: -50 },
+                                visible: { opacity: 1, x: 0 }
                             }} 
                          
-                            className="fsi-700">
+                            className="fsi-700 q-head">
                                 OUR STORY
                         </motion.h1>
 

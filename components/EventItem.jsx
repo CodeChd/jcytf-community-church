@@ -9,6 +9,7 @@ export default function EventItem({ evt }) {
 
     
     return (
+        <div>
         <div className={styles.event}>
             <div className={styles.img}>
                 {
@@ -21,10 +22,10 @@ export default function EventItem({ evt }) {
             </div>
 
             <div className={styles.info}>
+                <h3>{evt.attributes.name}</h3>
                 <span >
                     {evt.attributes.date ? new Date (evt.attributes.date).toLocaleDateString('en-US'): ""} AT {evt.attributes.time && evt.attributes.time}
                 </span>
-                <h3>{evt.attributes.name}</h3>
 
             </div>
 
@@ -34,6 +35,7 @@ export default function EventItem({ evt }) {
                 </Link>
             </div>
 
+        </div>
         </div>
     )
     
