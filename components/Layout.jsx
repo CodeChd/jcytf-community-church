@@ -20,10 +20,10 @@ const Layout = ({ title, keywords, description, children }) => {
 
       <Header />
       {router.pathname === '/' && <Showcase />}
-      <div className={`${styles.container} page`}>
+      <main className={`${styles.container} page`}>
 
         {children}
-      </div>
+      </main>
       <Footer />
     </>
   )

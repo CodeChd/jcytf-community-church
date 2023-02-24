@@ -1,5 +1,8 @@
 import { AuthProvider } from "@/context/AuthContext";
 import "@/styles/Footer.css";
+import "@/styles/Quote.css";
+import "@/styles/OurStory.css";
+import "@/styles/Events.css";
 import "@/styles/globals.css";
 
 
