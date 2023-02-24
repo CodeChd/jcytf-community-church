@@ -1,3 +1,39 @@
 .events-container{
     padding: 5rem;
 }
+
+
+@media(max-width: 560px){
+
+    .events-container{
+        margin-top: 0;
+        background:  url("/images/large_crowd.jpg") no-repeat top center;
+        position: relative;
+        background-size: cover ;
+        
+    }
+}
+
+
+@media(min-width: 560px){
+
+    .events-container{
+        margin-top: -50px;
+        background:  url("/images/large_crowd.jpg") no-repeat;
+        position: relative;
+        background-size: cover ;
+        background-position: center;
+    }
+}
+
+
+@media (min-width: 760px){
+
+    .events-container{
+        margin-top: -50px;
+        background:  url("/images/large_crowd.jpg") no-repeat;
+        position: relative;
+        background-size: cover ;
+        background-position: center;
+    }
+}

@@ -99,7 +99,7 @@
 
 .wrapper{
     padding: 5rem;
-     min-height: 90vh;
+     min-height: 95vh;
 
    
 }
@@ -229,7 +229,7 @@
     .wrapper .imgs{
         flex: 0 0 40%;
         background: url("/images/our-story.jpg") center center / cover no-repeat;
-        margin-left: clamp(2rem, 7vw, 8rem);
+        margin-left: clamp(8rem, 7vw, 8rem);
         width: clamp(25rem, 3vw, 30rem);
         height: 30rem;
        

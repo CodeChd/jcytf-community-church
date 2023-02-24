@@ -15,15 +15,15 @@ export default function EventItem({ evt }) {
                 {
                 evt.attributes.image.data === null ?( <Image src={'/images/event-default.svg'} width={170} height={150} alt="Event" />) 
                 :
-                ( <Image src={evt.attributes.image.data.attributes.formats.thumbnail.url} width={170} height={100} alt="Event" />)
+                ( <Image src={evt.attributes.image.data.attributes.formats.thumbnail.url} width={175} height={100} alt="Event" />)
                 
                 }
                
             </div>
 
             <div className={styles.info}>
-                <h3>{evt.attributes.name}</h3>
-                <span >
+                <h3 className="text-white fs-400">{evt.attributes.name}</h3>
+                <span className="text-white fs-300">
                     {evt.attributes.date ? new Date (evt.attributes.date).toLocaleDateString('en-US'): ""} AT {evt.attributes.time && evt.attributes.time}
                 </span>
 

@@ -7,7 +7,7 @@ export default function Events({events}) {
 
         <div className="events-container">
 
-      <h1 className=" ft-home uppercase">Featured Events</h1>
+      <h1 className=" ft-home uppercase text-white">Featured Events</h1>
       <div className='center'>
       {events.data.length === 0 && <h3>No events to show!</h3>}
       </div>
