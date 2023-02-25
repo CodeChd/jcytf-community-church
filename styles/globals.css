@@ -32,8 +32,8 @@ h1 {
 
 .btn {
   display: inline-block;
-  background: var(--orange);
-  color: #f6f4f4;
+  background: ghostwhite  ;
+  color: #3e3e3e;
   padding: 10px 20px;
   cursor: pointer;
   border: 0;
@@ -46,13 +46,13 @@ h1 {
 
 .btn-secondary {
   font: inherit;
-  font-size: 13px;
+  font-size: 16px;
   background: #000;
   color: #fff !important;
   border: 0;
-  border-radius: 5px;
-  padding: 5px 15px;
-  margin: 0 20px;
+  border-radius: 7px;
+  padding: .5rem;
+  margin-left: 1.5rem;
   cursor: pointer;
 }
 .btn-event {

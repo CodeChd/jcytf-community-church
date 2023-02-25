@@ -1,7 +1,26 @@
 .events-container{
     padding: 5rem;
+    color: white;
 }
 
+.events-container hr{
+    margin-left: -81.999px;
+    width: 0;
+
+}
+
+.events-container hr::after{
+        content: "";
+        width: 50vw;
+        height: 2px;
+        background-color: aliceblue;
+        position: absolute;
+        left: 0;
+}
+
+
+
+ 
 
 @media(max-width: 560px){
 

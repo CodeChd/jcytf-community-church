@@ -2,18 +2,19 @@
 import Link from "next/link"
 import Image from "next/image"
 import styles from '@/styles/EventItem.module.css'
+import { useRouter } from "next/router"
+
 
 
 export default function EventItem({ evt }) {
+    const router = useRouter()
 
-
-    
     return (
         <div>
         <div className={styles.event}>
             <div className={styles.img}>
                 {
-                evt.attributes.image.data === null ?( <Image src={'/images/event-default.svg'} width={170} height={150} alt="Event" />) 
+                evt.attributes.image.data === null ? (<Image src={router.pathname === "/events" ? '/images/event-default_dark.svg' : '/images/event-default.svg'} width={170} height={150} alt="Event" /> )
                 :
                 ( <Image src={evt.attributes.image.data.attributes.formats.thumbnail.url} width={175} height={100} alt="Event" />)
                 
@@ -22,8 +23,8 @@ export default function EventItem({ evt }) {
             </div>
 
             <div className={styles.info}>
-                <h3 className="text-white fs-400">{evt.attributes.name}</h3>
-                <span className="text-white fs-300">
+                <h3 >{evt.attributes.name}</h3>
+                <span >
                     {evt.attributes.date ? new Date (evt.attributes.date).toLocaleDateString('en-US'): ""} AT {evt.attributes.time && evt.attributes.time}
                 </span>
 

@@ -3,12 +3,13 @@
         justify-content: space-around;
         align-items:center;
         padding: 1rem;
-        margin-block: 15px;
+        margin-block: 10px;
         
     }
 
     .img{
         flex: 1;
+        margin-inline: 10px;
     }
 
 

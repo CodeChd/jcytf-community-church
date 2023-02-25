@@ -8,6 +8,7 @@ export default function Events({events}) {
         <div className="events-container">
 
       <h1 className=" ft-home uppercase text-white">Featured Events</h1>
+      <hr />
       <div className='center'>
       {events.data.length === 0 && <h3>No events to show!</h3>}
       </div>
@@ -17,7 +18,7 @@ export default function Events({events}) {
       ))
       }
 
-      {events.data.length > 0 && (<Link href='/events'><button className="btn-secondary fs-300">View More</button></Link>)}
+      {events.data.length > 0 && (<Link href='/events'><button className="btn-secondary  ">More Events</button></Link>)}
       
       </div>
 
