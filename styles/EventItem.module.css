@@ -1,9 +1,10 @@
     .event{
         display: flex;
-        justify-content: space-around;
         align-items:center;
-        padding: 1rem;
+        justify-content: space-evenly;
         margin-block: 10px;
+        padding: .3rem 0 .3rem 0;
+        z-index: 3;
         
     }
 
@@ -15,9 +16,6 @@
 
     .info{
         flex: 2;
-    }
-    
-    .info{
         margin-bottom: 20px;
     }
 

@@ -10,13 +10,13 @@ export default function EventItem({ evt }) {
     const router = useRouter()
 
     return (
-        <div>
+        
         <div className={styles.event}>
             <div className={styles.img}>
                 {
                 evt.attributes.image.data === null ? (<Image src={router.pathname === "/events" ? '/images/event-default_dark.svg' : '/images/event-default.svg'} width={170} height={150} alt="Event" /> )
                 :
-                ( <Image src={evt.attributes.image.data.attributes.formats.thumbnail.url} width={175} height={100} alt="Event" />)
+                ( <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={200} height={180} alt="Event" />)
                 
                 }
                
@@ -30,14 +30,14 @@ export default function EventItem({ evt }) {
 
             </div>
 
-            <div className={styles.link}>
+            <div className={`${styles.link} detail-btn`}>
                 <Link href={`/events/${evt.attributes.slug}`}>
-                    <div className="btn">Details</div>
+                    <div className="btn ">Details</div>
                 </Link>
             </div>
 
         </div>
-        </div>
+        
     )
     
 }

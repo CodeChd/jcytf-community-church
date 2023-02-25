@@ -1,7 +1,31 @@
+
 .events-container{
+    display: flex;
     padding: 5rem;
-    color: white;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    position: relative;
+    flex-direction: column;
+
 }
+
+.events-container::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+
+.events-container  *{
+    z-index: 10;
+}
+
+
 
 .events-container hr{
     margin-left: -81.999px;
@@ -26,9 +50,10 @@
 
     .events-container{
         margin-top: 0;
-        background:  url("/images/large_crowd.jpg") no-repeat top center;
+        background:  url("/images/large_crowd.jpg") no-repeat bottom center;
         position: relative;
         background-size: cover ;
+        
         
     }
 }
@@ -41,7 +66,6 @@
         background:  url("/images/large_crowd.jpg") no-repeat;
         position: relative;
         background-size: cover ;
-        background-position: center;
     }
 }
 
@@ -55,4 +79,6 @@
         background-size: cover ;
         background-position: center;
     }
+
+  
 }
