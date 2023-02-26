@@ -4,7 +4,7 @@ import { FaQuoteLeft } from "react-icons/fa"
 
 export default function Quote() {
     return (
-        <div>
+        <div className="Q-wrapper">
 
             <div className="inner-container">
 

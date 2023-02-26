@@ -6,7 +6,7 @@ import { parseCookies } from "@/helper/index"
 import styles from '@/styles/Dashboard.module.css'
 import Link from "next/link"
 import { useRouter } from "next/router";
-import { useCallback, useContext, useEffect } from "react"
+import { useCallback, useContext } from "react"
 
 
 

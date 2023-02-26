@@ -1,7 +1,7 @@
 .showcase{
-   height: 85vh;
-    width: 100%;
-    background: #000 url('../public/images/john-price-RAZQiZOX3mU-unsplash.jpg') no-repeat ;
+   height: 95vh;
+
+    background:  url('../public/images/john-price-RAZQiZOX3mU-unsplash.jpg') no-repeat ;
     color: whitesmoke;
     position: relative;
     background-size: cover ;
@@ -24,11 +24,10 @@
 }
 
 .showcase *{
-    z-index: 20;
+    z-index: 1;
 }
 
 .showcase h1{
-    margin-bottom: 6rem;
     font-size: var(--fs-800);   
     margin-bottom: 0;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),

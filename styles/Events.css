@@ -1,3 +1,85 @@
+
 .events-container{
-    padding: 5rem;
+    display: flex;
+    padding: 10rem 5.3rem 3rem 5.3rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.events-container::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+
+.events-container  *{
+    z-index: 10;
+}
+
+
+
+.events-container hr{
+    margin-left: -81.999px;
+    width: 0;
+
+}
+
+.events-container hr::after{
+        content: "";
+        width: 50vw;
+        height: 2px;
+        background-color: aliceblue;
+        position: absolute;
+        left: 0;
+}
+
+
+
+ 
+
+@media(max-width: 560px){
+
+    .events-container{
+        margin-top: 0;
+        background:  url("/images/large_crowd.jpg") no-repeat bottom center;
+        position: relative;
+        background-size: cover ;
+        
+        
+    }
+}
+
+
+@media(min-width: 560px){
+
+    .events-container{
+        margin-top: -50px;
+        background:  url("/images/large_crowd.jpg") no-repeat;
+        position: relative;
+        background-size: cover ;
+    }
+}
+
+
+@media (min-width: 760px){
+
+    .events-container{
+        margin-top: -50px;
+        background:  url("/images/large_crowd.jpg") no-repeat;
+        position: relative;
+        background-size: cover ;
+        background-position: center;
+    }
+
+  
 }
