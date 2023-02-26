@@ -1,9 +1,10 @@
     .event{
         display: flex;
         align-items:center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin-block: 10px;
-        padding: .3rem 0 .3rem 0;
+        padding: .3rem 0 .3rem 0;   
+        gap: 1rem;
         z-index: 3;
         
     }

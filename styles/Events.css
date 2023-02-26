@@ -1,11 +1,12 @@
 
 .events-container{
     display: flex;
-    padding: 5rem;
+    padding: 10rem 5.3rem 3rem 5.3rem;
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     position: relative;
     flex-direction: column;
+    justify-content: center;
 
 }
 
