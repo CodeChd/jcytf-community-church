@@ -125,6 +125,7 @@ const EditEvents = ({ Edata ,token}) => {
 
     return (
         <Layout title='Edit Event'>
+             <div className="sub-container">
             <Link href='/events'>{'<'} Go Back</Link>
             <h1>Edit Event</h1>
             <ToastContainer />
@@ -189,6 +190,7 @@ const EditEvents = ({ Edata ,token}) => {
                 </div>
                 <input type="submit" value="Update Event" className="btn" />
             </form>
+                     </div>
         </Layout>
     )
 }

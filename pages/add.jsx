@@ -93,6 +93,8 @@ const AddEvents = ({token}) => {
   }
   return (
     <Layout title='Add New Event'>
+
+       <div className="sub-container">
       <Link href='/events'>{'<'} Go Back</Link>
       <h1>Add Event</h1>
       <ToastContainer />
@@ -137,6 +139,7 @@ const AddEvents = ({token}) => {
         </div>
         <input type="submit" value="Add Event" className="btn" />
       </form>
+       </div>
     </Layout>
   )
 }

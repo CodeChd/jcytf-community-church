@@ -17,6 +17,7 @@ export default function EventsPage({ events, total, page }) {
 
   return (
     <Layout>
+      <div className="sub-container">
       <div className={styles.flex}>
 
       <h1>Events</h1>
@@ -39,6 +40,7 @@ export default function EventsPage({ events, total, page }) {
 
 
       <Pagination page={page} total={total} />
+      </div>
     </Layout>
   );
 }

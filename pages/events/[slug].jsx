@@ -19,17 +19,8 @@ const slug = ({ evt }) => {
 
   return (
     <Layout>
-
+       <div className="sub-container">
       <div className={styles.event}>
-        {/* <div className={styles.controls}>
-          <Link href={`/events/edit/${evt.id}`}>
-            <span>  <FaPencilAlt /> Edit Event </span>
-          </Link>
-
-          <a href="#" className={styles.delete} onClick={deleteEvent}>
-            <FaTimes /> Delete Event
-          </a>
-        </div> */}
 
         <span>
           {new Date(evt.attributes.date).toLocaleDateString('en-US')} AT {evt.attributes.time}
@@ -62,7 +53,7 @@ const slug = ({ evt }) => {
           {"<"} Go Back
         </p>
       </Link>
-
+ </div>
     </Layout>
   )
 }

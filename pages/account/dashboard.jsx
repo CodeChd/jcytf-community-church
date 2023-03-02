@@ -19,11 +19,11 @@ export default function Dashboard({ events, token }) {
     useCallback(() => {
         if (!user) {
             router.push('/account/enter');
-         }
-         
-             if(user){
-                router.push('/account/dashboard')
-              }
+        }
+
+        if (user) {
+            router.push('/account/dashboard')
+        }
 
 
 
@@ -61,28 +61,30 @@ export default function Dashboard({ events, token }) {
 
     return (
         <Layout title="User Dashboard">
-            <div className={styles.dash}>
-                <h1>DASHBOARD</h1>
-                <div className={styles.grid}>
+            <div className="sub-container">
+                <div className={styles.dash}>
+                    <h1>DASHBOARD</h1>
+                    <div className={styles.grid}>
 
-                    <h3>MY EVENTS</h3>
+                        <h3>MY EVENTS</h3>
 
 
-                    <Link href='/add'>
-                        <p className="btn-event btn-icon">Add Event</p>
-                    </Link>
+                        <Link href='/add'>
+                            <p className="btn-event btn-icon">Add Event</p>
+                        </Link>
+
+                    </div>
+
+                    {events &&
+
+
+                        events.map((e) => (
+                            <DashEvent key={e.id} evt={e} handleDelete={delEvent} />
+                        ))}
+
+
 
                 </div>
-
-                {events &&
-                
-                
-                events.map((e) => (
-                    <DashEvent key={e.id} evt={e} handleDelete={delEvent} />
-                ))}
-
-
-
             </div>
         </Layout>
     )

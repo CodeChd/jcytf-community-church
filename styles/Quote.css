@@ -2,9 +2,10 @@
 
 .inner-container{
     display: flex;
-    padding: 2% 7%;
     position: relative;
     align-items: center;
+    padding: 1rem 0 0 1rem;
+    justify-content: flex-start;
     
 }
 
@@ -42,18 +43,6 @@
     background-color: rgb(255, 255, 255);
 }
 
-/* .inner hr::after{
-    content: "";
-    width: 46.30vw;
-    height: 2px;
-    background: rgb(255, 255, 255);
-    position: absolute;
-    top: -.998px;
-    left:0;
-    right: 0;
-    z-index: 1;
-} */
-
 .quote{
     margin-top: 2rem;
     line-height: 1.8;
@@ -61,12 +50,12 @@
 
 .img-quote{
     background: url("/images/Quote.jpg") center center no-repeat;
-    width: 20rem;
+    width:100%;
     height: 20rem;
     flex: 0 0 50%;
     position: relative;
     z-index: 2;
-    box-shadow: rgb(0 0 0 / 45%) 0 10px 25px;
+    box-shadow: rgb(0 0 0 / 45%) 0 10px 10px;
 }
 
 @media(max-width: 670px){
@@ -126,8 +115,29 @@
         max-width: 90vw;
         margin: 0 auto;
         z-index: 2;
-        box-shadow: rgb(0 0 0 / 45%) 0 10px 25px;
 
     }
 }
+
+@media(min-width: 1235px){
+    .inner-container{
+        display: flex;
+        position: relative;
+        align-items: center;
+        padding: 1rem 0 0 4rem;
+        justify-content: flex-start;
+        
+    }
+    
+    .img-quote{
+        background: url("/images/Quote.jpg") center center no-repeat;
+        position: relative;
+        flex: 0 0 40%;
+        background-size: cover;
+        margin: 0 auto;
+        z-index: 2;
+
+    }
+}
+
 

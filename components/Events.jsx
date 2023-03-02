@@ -6,7 +6,7 @@ export default function Events({ events }) {
 
     <div className="events-container">
 
-      <h2 className="ft-home uppercase text-white fsi-700">Featured Events</h2>
+      <h2 className="ft-home uppercase text-white">Featured Events</h2>
       <hr />
 
 
