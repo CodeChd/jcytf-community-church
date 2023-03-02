@@ -54,10 +54,6 @@
 }
 
 
-
-
-
-
 /* colors */
 .bg-dark { background-color: hsl( var(--clr-dark) );}
 .bg-accent { background-color: hsl( var(--clr-light) );}
@@ -99,16 +95,13 @@
 
 .wrapper{
     padding: 5rem;
-     min-height: 50vh;
 
    
 }
 
 .content > div{
-    flex: 0 0 50%;
+    flex: 0 0 10%;
 }
-
-
 
 .content div{
     position: relative;
@@ -153,6 +146,19 @@
     background: var(--orange);
 }
 
+
+.image-container{
+    margin-left: auto;
+}
+
+.wrapper .imgs{
+    flex: 0 0 40%;
+    background: url("/images/our-story.jpg") center center / cover no-repeat;
+    width: 100%;
+    height: 30rem;
+   
+}
+
 @media(max-width: 560px){
     .wrapper{
         padding: 3rem;
@@ -178,7 +184,7 @@
         flex: 0 0 40%;
         background: url("/images/our-story.jpg") center center / cover no-repeat;
         width: 100%;
-        height: 20rem;
+        height: 100%;
        
     }
 }
@@ -211,7 +217,6 @@
         background: url("/images/our-story.jpg") center center / cover no-repeat;
         width: 100%;
         height: 30rem;
-       
     }
     
 
@@ -222,15 +227,14 @@
 
     .q-head{
        text-align: left;
+       flex: 1;
     }
 
 
 
     .wrapper .imgs{
-        flex: 0 0 40%;
         background: url("/images/our-story.jpg") center center / cover no-repeat;
-        margin-left: clamp(8rem, 7vw, 8rem);
-        width: clamp(25rem, 3vw, 30rem);
+        width: clamp(23rem, 3vw, 30rem);
         height: 30rem;
        
     }

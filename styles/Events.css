@@ -26,6 +26,14 @@
     z-index: 10;
 }
 
+.ft-home{
+    font-size: clamp(2.5rem , 5vw, 4rem);
+}
+
+hr{
+    margin: 0 0 2.5em 0;
+}
+
 
 
 .events-container hr{
@@ -56,6 +64,9 @@
         background-size: cover ;
         
         
+    }
+    hr{
+      display: none;
     }
 }
 

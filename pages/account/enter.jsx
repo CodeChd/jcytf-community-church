@@ -29,6 +29,7 @@ export default function login() {
 
   return ( 
     <Layout title="User Login">
+        <div className="sub-container">
         <div className={styles.auth}>
             <h1>
                 <FaUser/> LOGIN
@@ -47,6 +48,7 @@ export default function login() {
                 <input type="submit" value='Login' className='btn' />
             </form>
             <p>Don't have an account? <Link href='/account/register'>Register</Link></p>
+        </div>
         </div>
     </Layout>
   )

@@ -121,7 +121,10 @@ h1 {
 }
 
 
-
+.sub-container{
+  max-width: 80vw;
+  margin: 8rem auto;
+}
  
 
 
