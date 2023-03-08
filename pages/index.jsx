@@ -3,8 +3,8 @@ import Layout from "@/components/Layout";
 import OurStory from "@/components/OurStory";
 import Quote from "@/components/Quote";
 import { API_URL } from "../config";
-
-
+import WhatNext from "@/components/WhatNext";
+import Answers from "@/components/Answers";
 
 export default function Home({ events }) {
 
@@ -17,6 +17,8 @@ export default function Home({ events }) {
       <Quote/>
       
       <Events   events={events}/>
+      <WhatNext/>
+      <Answers/>
 
 
     </Layout>

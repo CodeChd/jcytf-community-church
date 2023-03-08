@@ -1,0 +1,75 @@
+.next-container{
+    max-width: 1900px;
+    margin: 0 auto;
+    display: flex;
+    padding-left: 10vw;
+        align-items: center;
+}
+.next-card{
+    max-width: 43vw ;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    position: relative;
+    transform: translateY(-100px); 
+    padding: 80px 80px 60px 80px;
+}
+
+
+.next-card::after{
+    content: "";
+    position: absolute;
+    right: 30vw;
+    top: 0;
+    width: 30vw;
+    background: #ffffff;
+    height: 100%;
+    z-index: -1;
+
+}
+
+.next-container hr{
+    position: relative;
+    overflow: visible;
+    width:81vw;
+    right: 50vw;
+    height: 3px;
+    background-color: black;
+}
+
+
+/* .next-container hr::after{
+    content: "ds";
+    position: absolute;
+    width: 50vw;
+    height: 2px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+
+} */
+
+
+.join-btn{
+margin: 0;
+}
+
+.img-next-container{
+    z-index: 11;
+    margin-left: -50px;
+}
+
+.imgs-next{
+    background: url("/images/cellGroup.jpg") center center no-repeat;
+    position: relative;
+    width: 30vw;
+    height: 20vw;
+    flex: 0 0 50%;
+    background-size: cover;
+    margin: 0 auto;
+    transform: translateY(-100px);  
+    box-shadow: rgb(0 0 0 / 45%) 0 10px 10px;
+
+}
+
+
