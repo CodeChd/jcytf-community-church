@@ -1,3 +1,5 @@
+
+
 .next-container{
     max-width: 1900px;
     margin: 0 auto;
@@ -51,7 +53,18 @@
 
 
 .join-btn{
-margin: 0;
+    margin: 0;
+    margin-top: 1rem;
+    background-color: #e0985a;
+    font: inherit;
+    font-size: 16px;
+    filter: brightness(120%);
+    color: #fff !important;
+    border: 0;
+    border-radius: 7px;
+    padding: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .img-next-container{

@@ -5,6 +5,7 @@ import Quote from "@/components/Quote";
 import { API_URL } from "../config";
 import WhatNext from "@/components/WhatNext";
 import Answers from "@/components/Answers";
+import Pastors from "@/components/Pastors";
 
 export default function Home({ events }) {
 
@@ -19,6 +20,7 @@ export default function Home({ events }) {
       <Events   events={events}/>
       <WhatNext/>
       <Answers/>
+      <Pastors/>
 
 
     </Layout>
