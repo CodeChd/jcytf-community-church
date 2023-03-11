@@ -1,15 +1,16 @@
 
 .events-container{
     display: flex;
-    padding: 10rem 5.3rem 3rem 5.3rem;
+    padding: 10rem 15rem 10rem 15rem;
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     position: relative;
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
+
 
 }
-
 .events-container::after{
     content: '';
     position: absolute;
@@ -30,7 +31,7 @@
     font-size: clamp(2.5rem , 5vw, 4rem);
 }
 
-hr{
+.events-hr{
     margin: 0 0 2.5em 0;
 }
 
@@ -52,6 +53,13 @@ hr{
 }
 
 
+.more-events{
+    align-self: center;
+}
+
+.btn-more{
+    padding: 2rem;
+}
 
  
 
@@ -92,5 +100,6 @@ hr{
         background-position: center;
     }
 
+  
   
 }
