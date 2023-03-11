@@ -1,0 +1,62 @@
+
+/* swiper js */
+
+.pastor-heading{
+  text-align: center;
+}
+
+.swiper {
+    width: 45vw;
+    height: 45vh;
+    background: #e0985a;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+
+  }
+  
+  .img-1{
+    background: url("/images/pastors/first.jpg")  center bottom no-repeat;
+    background-size:cover;
+  }
+  .img-2{
+    background: url("/images/pastors/second.jpg") center bottom no-repeat;
+    background-size:cover;
+    position: relative;
+    top: .999px;
+  }
+  .img-3{
+    background: url("/images/pastors/third.jpg") center bottom no-repeat;
+    background-size:cover;
+    position: relative;
+    top: .999px;
+  }
+  .img-4{
+    background: url("/images/pastors/fourth.jpg") center bottom no-repeat;
+    background-size:cover;
+    position: relative;
+    top: .999px;
+  }
+  .img-5{
+    background: url("/images/pastors/fifth.jpg") center bottom no-repeat;
+    background-size:cover;
+    position: relative;
+    top: .999px;
+    right: 1.70px;
+  }

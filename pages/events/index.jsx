@@ -5,6 +5,7 @@ import { API_URL, PER_PAGE } from '@/config/index';
 import Search from "@/components/Search"
 import { useRouter } from "next/router"
 import styles from '@/styles/EventHome.module.css'
+import { useCallback, useState } from "react";
 
 
 
@@ -13,6 +14,15 @@ import styles from '@/styles/EventHome.module.css'
 
 export default function EventsPage({ events, total, page }) {
   const router = useRouter()
+  const [evtLength, setEvtLength] = useState()
+
+useCallback(() =>{
+  async function load(){
+    setEvtLength(events.data)
+  }
+
+  load()
+},[])
 
 
   return (
@@ -29,10 +39,11 @@ export default function EventsPage({ events, total, page }) {
       </div>
       <div className="center">
 
-      {events.data.length === 0 && <h3>No events to show!</h3>}
+      {evtLength.length === 0 && <h3>No events to show!</h3>}
+
       </div>
 
-      {events.data.map((evt) => (
+      {evtLength.data.map((evt) => (
         <EventItem key={evt.id} evt={evt} />
       ))
       }

@@ -5,6 +5,7 @@ import "@/styles/OurStory.css";
 import "@/styles/Events.css";
 import "@/styles/WhatNext.css";
 import "@/styles/Answers.css";
+import "@/styles/OurPastor.css";
 import "@/styles/globals.css";
 
 

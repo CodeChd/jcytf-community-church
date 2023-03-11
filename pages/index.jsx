@@ -5,7 +5,7 @@ import Quote from "@/components/Quote";
 import { API_URL } from "../config";
 import WhatNext from "@/components/WhatNext";
 import Answers from "@/components/Answers";
-import Pastors from "@/components/Pastors";
+import OurPastor from "@/components/OurPastor";
 
 export default function Home({ events }) {
 
@@ -20,7 +20,7 @@ export default function Home({ events }) {
       <Events   events={events}/>
       <WhatNext/>
       <Answers/>
-      <Pastors/>
+      <OurPastor/>
 
 
     </Layout>
