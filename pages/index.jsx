@@ -19,8 +19,8 @@ export default function Home({ events }) {
       
       <Events   events={events}/>
       <WhatNext/>
-      <Answers/>
       <OurPastor/>
+      <Answers/>
 
 
     </Layout>
