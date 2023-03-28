@@ -122,3 +122,14 @@
     }
 }
 
+@media (max-width: 560px){
+
+    
+    .next-container hr{
+        display: block;
+        width:65vw;
+
+    }
+
+}
+

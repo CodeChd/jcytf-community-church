@@ -31,7 +31,7 @@
     font-size: clamp(2.5rem , 5vw, 4rem);
 }
 
-.events-hr{
+.events-container hr{
     margin: 0 0 2.5em 0;
 }
 
@@ -73,6 +73,12 @@
         
         
     }
+
+    .events-container hr::after{
+        width: 65vw;
+  
+}
+
     hr{
       display: none;
     }
@@ -111,6 +117,8 @@
 
 
     }
+
+   
 
 
 }
