@@ -160,12 +160,15 @@
     background: url("/images/our-story.jpg") center center / cover no-repeat;
     width: 100%;
     height: 30rem;
-   
+    
 }
+
+
+
 
 @media(max-width: 800px){
     .wrapper{
-        padding:0 1.2rem 3rem 1.2rem;
+        padding:0 4rem 3rem 4rem;
         flex-flow: column wrap;
     
        
@@ -181,7 +184,7 @@
     }
     
     .content hr::after{
- display: none;
+    display: none;
             
     }
 
@@ -191,12 +194,23 @@
     }
 
     .wrapper .imgs{
-        flex: 0 0 40%;
         background: url("/images/our-story.jpg") center center / cover no-repeat;
         width: clamp(21rem, 3vw, 30rem);
         height: 30rem;
        
     }
+}
+
+@media (max-width: 700px){
+
+
+    .wrapper{
+        padding:0 1.2rem 3rem 1.2rem;
+        flex-flow: column wrap;
+    
+       
+    }
+  
 }
 
 

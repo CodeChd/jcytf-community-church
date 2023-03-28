@@ -96,8 +96,6 @@ export default function Answers() {
 
                             <span className="answer-quote">You can be sure that you have eternal life when you trust in Jesus.</span>
 
-
-
                             <span>And the testimony is this, that God has given us eternal life, and this life is in His Son. He who has the Son has the life; he who does not have the Son of God does not have the life. These things I have written to you who believe in the name of the Son of God, so that you may know that you have eternal life. 1 John 5:11-13</span>
 
 
