@@ -36,10 +36,10 @@
     z-index: -1;
 }
 
-.inner .hr{
+.inner hr{
     position: relative;
+    display: block;
     overflow: visible;
-    width: 50vw;
     background-color: rgb(255, 255, 255);
 }
 
@@ -84,6 +84,7 @@
     }
 
     .inner{
+        overflow: visible;
         background: hsl(0, 0%, 25%);
         padding: 80px 20px 60px 40px;
         position: relative; 
@@ -91,22 +92,12 @@
 
     }
 
-    .inner .hr{
-        position: relative;
-        overflow: visible;
-        width: 79vw;
-        background-color: rgb(255, 255, 255);
-    }
     
-
-    .inner{
-        overflow: visible;
-    }
-
     .inner::after{
-      display: none;
+        display: none;
     }
     
+
 
     .img-quote{
         background: url("/images/Quote.jpg") center center no-repeat;

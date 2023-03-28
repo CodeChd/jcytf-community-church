@@ -2,10 +2,6 @@
 :root{
 
     /* colors */
-    --clr-dark: 230 35% 7%;
-    --clr-light: 231 77% 90%;
-    --clr-white: 0 0% 100%;
-
     
     --orange: #e0985a;
     --pale-yellow: #fde09c;
@@ -113,18 +109,24 @@
 
 .content hr{
 
-    background: #262626;
-
+    width: 100%;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+    background: #444444;
+    position: relative;
+    overflow: visible;
+    
 }
 
 .content hr::after{
-        content: '';
-        width: 50vw;
-        height: 2px;
-        background:#343434;
-        position: absolute;
-        top: 98%;
-        right: 0;
+    content: '';
+    width: 60vw;
+    height: 3px;
+    background: #444444;
+    position: absolute;
+    top: -1px;
+    right: 0;
         
 }
 
@@ -161,9 +163,9 @@
    
 }
 
-@media(max-width: 560px){
+@media(max-width: 800px){
     .wrapper{
-        padding: 3rem;
+        padding:0 1.2rem 3rem 1.2rem;
         flex-flow: column wrap;
     
        
@@ -171,11 +173,17 @@
     .content{
         order: 2;
     }
+    
+    .content hr{
 
-    .content hr::after{
-        display: none;
+     display: block;
         
-}
+    }
+    
+    .content hr::after{
+ display: none;
+            
+    }
 
 
     .image-container{
@@ -185,14 +193,16 @@
     .wrapper .imgs{
         flex: 0 0 40%;
         background: url("/images/our-story.jpg") center center / cover no-repeat;
-        width: 100%;
-        height: 100%;
+        width: clamp(21rem, 3vw, 30rem);
+        height: 30rem;
        
     }
 }
 
 
-@media (min-width: 560px) and (max-width: 767px){
+
+
+@media (min-width: 800px) and (max-width: 960px){
 
     .wrapper{
         padding: 5rem;
@@ -207,8 +217,8 @@
     .content hr::after{
         display: none;
         
-}
-
+    }
+    
 
     .image-container{
         order: 1;
@@ -217,15 +227,14 @@
     .wrapper .imgs{
         flex: 0 0 40%;
         background: url("/images/our-story.jpg") center center / cover no-repeat;
-        width: 100%;
+        width: clamp(23rem, 3vw, 30rem);
         height: 30rem;
     }
     
 
 }
 
-
-@media (min-width: 768px){
+@media (min-width: 960px){
 
     .q-head{
        text-align: left;

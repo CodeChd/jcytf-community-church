@@ -1,7 +1,7 @@
 .Answers-container{
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 5rem;
 }
 
 .Answers-container > p, .answers-heading {
@@ -68,11 +68,32 @@
 }
 
 .faith-heading{
-    font-weight: 550;
+    font-weight: 550
+    
+   
 }
 
 .faith-box{
     padding: 0 16px ;
     margin-block: 1rem;
     border-left: 2px solid rgb(36, 36, 36);
+}
+
+@media (max-width: 760px){
+    .item{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+    }
+}
+
+@media (max-width : 1000px){
+
+ 
+
+
+    .container-answers{
+        grid-template-columns: 1fr;
+    }
 }

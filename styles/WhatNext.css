@@ -2,10 +2,9 @@
 
 .next-container{
     max-width: 1900px;
-    margin: 0 auto;
     display: flex;
     padding-left: 10vw;
-        align-items: center;
+    align-items: center;
 }
 .next-card{
     max-width: 43vw ;
@@ -76,7 +75,7 @@
     background: url("/images/cellGroup.jpg") center center no-repeat;
     position: relative;
     width: 30vw;
-    height: 20vw;
+    height: 40vh;
     flex: 0 0 50%;
     background-size: cover;
     margin: 0 auto;
@@ -85,4 +84,41 @@
 
 }
 
+
+@media (max-width: 1000px){
+    .next-container{
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+
+    }
+
+    .next-container hr{
+        position: relative;
+        overflow: visible;
+        width:75vw;
+        right: 0;
+        height: 3px;
+        background-color: black;
+    }
+
+    .next-card{
+        max-width: 80%;
+        padding: 1rem;
+        order: 2;
+    }
+    .next-card::after{
+       display: none;
+    }
+
+    .img-next-container{
+        margin-left: 0;
+    }
+
+    .imgs-next{
+        order: 1;
+        width: 80vw;
+        height: 50vh;
+    }
+}
 
