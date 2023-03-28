@@ -31,33 +31,29 @@ align-items: center;
 }
 
 .pastor-heading{
+  position: relative;
+  margin: 0 auto;
   text-align: center;
   z-index: 2;
-  position: relative;
+  width: 30%;
   margin-bottom: 1rem;
+  padding-inline: 1rem;
 }
 
-.pastor-heading::before{
-  content: "";
-  width: 38.999vw;
-  background-color: #fff;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-}
 .pastor-heading::after{
   content: "";
-  width: 38.999vw;
+  width: 17vw;
   background-color: #fff;
   height: 2px;
   position: absolute;
-  top: 50%;
-  right: 0;
+  left: 21%;
+  bottom: 0;
 }
 
+
+
 .swiper {
-    width: 45vw;
+    width: 50vw;
     height: 45vh;
   }
   
@@ -77,45 +73,34 @@ align-items: center;
     width: 100%;
     height: 100%;
     object-fit:cover;
-
-  }
-  
-  .img-1{
     position: relative;
-    left: -100px;
+
   }
 
-  .pastors-label-1{
-  position: absolute;
-  bottom:10%;
-  right: 40%;
-  font-weight: 600;
 
+.p-container{
+    text-align: center;
   }
   
+.pastors-label-1{
+  transform: translateY(-66px) translateX(25px);
+}
 
-  .pastors-label-2{
-  position: absolute;
-  bottom:-1rem;
-  right: 36%;
+.pastors-label-2{
+  transform: translateY(-80px) translateX(25px);
   font-weight: 600;
   font-size: 2.5rem;
+  
+}
 
+
+@media (max-width: 670px){
+
+  .swiper {
+    width: 90vw;
+    height: 45vh;
   }
 
-  .img-2{
-    position: relative;
-    left: -100px;
-  }
-  .img-3{
-    position: relative;
-    left: -100px;
-  }
-  .img-4{
-    position: relative;
-    left: -100px;
-  }
-  .img-5{
-    position: relative;
-    left: -100px;
-  }
+}
+
+

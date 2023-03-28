@@ -13,7 +13,7 @@ export default function Answers() {
 
 
                 <div className="grid-answers-item-1">
-                    <div className="item">
+                    <div className="item item-1">
                         <h3>1</h3>
                         <p>
                             <span className="asnwers-main">GOD LOVES YOU.</span>

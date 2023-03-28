@@ -1,7 +1,7 @@
 
 .events-container{
     display: flex;
-    padding: 10rem 15rem 10rem 15rem;
+    padding: 10rem 12rem 10rem 12rem;
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     position: relative;
@@ -99,7 +99,18 @@
         background-size: cover ;
         background-position: center;
     }
+  
+  
+}
 
-  
-  
+@media (max-width: 960px) {
+
+
+    .events-container{
+        padding: 10rem 5rem 10rem 5em;
+
+
+    }
+
+
 }
