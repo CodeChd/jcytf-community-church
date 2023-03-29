@@ -26,7 +26,7 @@ export default function OurStory() {
                     <hr />
                 </div>
                 <div className="story-ch">
-                    <p className="fsi-300">We are a movement of men and women who have encountered god and committed our lives to the lord, focused on making an impact through the work of the holy spirit in transforming lives, families, communities and nations, for the glory of god. </p>
+                    <p className="fsi-300 our-story-txt">We are a movement of men and women who have encountered god and committed our lives to the lord, focused on making an impact through the work of the holy spirit in transforming lives, families, communities and nations, for the glory of god. </p>
                 </div>
                 <div className="readmore"><a className="btn-readmore text-white" href="#">READ MORE</a></div>
             </div>

@@ -20,7 +20,7 @@
 @media (max-width: 35em) {
     :root {
         --fsi-800: 3.2rem;
-        --fsi-700: 2rem;
+        --fsi-700: 2.3rem;
         --fsi-600: 1.5rem;
         --fsi-500: 1.25rem;
         --fsi-400: 1rem;
@@ -122,7 +122,7 @@
 .content hr::after{
     content: '';
     width: 60vw;
-    height: 3px;
+    height: 2px;
     background: #444444;
     position: absolute;
     top: -1px;
@@ -130,11 +130,18 @@
         
 }
 
+.our-story-txt{
+    font-size: 18px;
+    line-height: 1.8;
+
+}
+
 
 .story-ch{
     max-width: 65ch;
     font-weight: 20px;
     line-height: 1.8;
+    padding: 1rem;
 }
 
 .readmore{

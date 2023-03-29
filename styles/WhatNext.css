@@ -37,18 +37,10 @@
     background-color: black;
 }
 
-
-/* .next-container hr::after{
-    content: "ds";
-    position: absolute;
-    width: 50vw;
-    height: 2px;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-
-} */
+.quote-next{
+    padding: 1rem;
+    line-height: 1.8;
+}
 
 
 .join-btn{
@@ -96,7 +88,7 @@
     .next-container hr{
         position: relative;
         overflow: visible;
-        width:75vw;
+        width:76vw;
         right: 0;
         height: 3px;
         background-color: black;
@@ -127,8 +119,13 @@
     
     .next-container hr{
         display: block;
-        width:65vw;
+        width:80vw;
 
+    }
+
+    .next-card{
+        max-width: 88% ;
+        padding: 1rem;
     }
 
 }

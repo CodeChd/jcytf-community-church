@@ -1,28 +1,39 @@
 .pastor-wrapper{
-  min-height: 95vh;
+  min-height: 68vh;
 display: flex;
 justify-content: center;
 align-items: center;
+
 
 }
 
 .pastor-wrapper-content{
   position: relative;
   background: url("/images/church-background.jpg") center bottom no-repeat ;
+
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  padding: 4rem 0;
+
+  padding: 1.5rem 0;
   margin-inline: 1.5rem;
   display: flex;
   flex-direction: column;
   color: #fff;
   width: 100%;
+  position: absolute;
+
 
 }
 
 .pastor-wrapper-content::after{
   content: "";
   position: absolute;
-  background-color: rgba(53, 53, 64, 0.372);
+  background-color: rgba(78, 69, 58, 0.372);
   top: 0;
   left: 0;
   right: 0;
@@ -53,7 +64,7 @@ align-items: center;
 
 
 .swiper {
-    width: 50vw;
+    width: 52vw;
     height: 45vh;
   }
   
@@ -73,38 +84,57 @@ align-items: center;
     width: 100%;
     height: 100%;
     object-fit:cover;
+    margin-bottom: 4px;
     position: relative;
-
   }
+
 
   
 .pastors-label-1{
-  transform: translateY(-66px) translateX(25px);
+  transform: translateY(-60px) translateX(25px);
 }
 
 .pastors-label-2{
-  transform: translateY(-80px) translateX(25px);
+  transform: translateY(-77px) translateX(25px);
   font-weight: 600;
   font-size: 2.5rem;
   
 }
 
+.md-txt{
+  font-size: 2.3rem;
 
-@media (max-width: 719px){
-
+}
+@media (max-width: 1000px){
   .swiper {
-    width: 90vw;
+    width: 87vw;
     height: 45vh;
   }
 
+}
+
+
+
+@media (max-width: 740px){
+
+  .swiper {
+    width: 85vw;
+    height: 45vh;
+  }
+
+  
+  .p-container{
+    
+    transform: translateX(-15px);
+  }
   .pastor-heading::after{
     min-width: 200px;
     width: 270px;
   }
 
-  .p-container{
-   
-    transform: translateX(-15px);
+  .md-txt{
+    font-size: 2rem;
+  
   }
 
   
@@ -112,6 +142,17 @@ align-items: center;
 }
 
 @media (max-width: 559px){
+
+  .swiper {
+    width: 86vw;
+    height: 45vh;
+  }
+
+  .sm-txt{
+    margin-top: 1rem;
+
+    font-size: 1.5rem;
+  }
 
   .pastor-heading::after{
     min-width: 200px;
