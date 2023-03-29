@@ -45,7 +45,7 @@
 
 .events-container hr::after{
         content: "";
-        width: 50vw;
+        width: 670px;
         height: 2px;
         background-color: aliceblue;
         position: absolute;
@@ -63,26 +63,7 @@
 
  
 
-@media(max-width: 560px){
 
-    .events-container{
-        margin-top: 0;
-        background:  url("/images/large_crowd.jpg") no-repeat bottom center;
-        position: relative;
-        background-size: cover ;
-        
-        
-    }
-
-    .events-container hr::after{
-        width: 65vw;
-  
-}
-
-    hr{
-      display: none;
-    }
-}
 
 
 @media(min-width: 560px){
@@ -109,7 +90,24 @@
   
 }
 
+@media (max-width: 1200px) {
+
+    .events-container hr::after{
+        width: 600px;
+
+    }
+    
+
+
+}
+
 @media (max-width: 960px) {
+
+    .events-container hr::after{
+        width: 420px;
+
+    }
+    
 
 
     .events-container{
@@ -120,5 +118,48 @@
 
    
 
+
+}
+
+
+
+@media(max-width: 560px){
+
+    .events-container{
+        margin-top: 0;
+        background:  url("/images/large_crowd.jpg") no-repeat bottom center;
+        position: relative;
+        background-size: cover ;
+        padding: 10rem 5rem 10rem 5rem;
+        position: relative;
+        
+        
+        
+    }
+
+    .ft-home{
+        font-size:3rem;
+        position: absolute;
+        top: 80px;
+        left: 50px;
+    }
+
+    .events-container hr::after{
+        width: 65vw;
+  
+}
+
+    hr{
+      display: none;
+    }
+}
+
+@media(max-width: 430px){
+    .ft-home{
+        font-size:2em;
+        position: absolute;
+        top: 80px;
+        left: 45px;
+    }
 
 }
