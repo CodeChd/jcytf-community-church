@@ -5,23 +5,17 @@ import { API_URL, PER_PAGE } from '@/config/index';
 import Search from "@/components/Search"
 import { useRouter } from "next/router"
 import styles from '@/styles/EventHome.module.css'
-import {  useEffect, useState } from "react";
-
-
-
 
 
 
 export default function EventsPage({ events, total, page }) {
+
   const router = useRouter()
-
-
 
   return (
     <Layout>
       <div className="sub-container">
       <div className={styles.flex}>
-
       <h1>Events</h1>
       <div>
 

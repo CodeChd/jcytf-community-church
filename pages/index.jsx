@@ -16,7 +16,6 @@ export default function Home({ events }) {
 
       <OurStory/>
       <Quote/>
-      
       <Events   events={events}/>
       <WhatNext/>
       <OurPastor/>
