@@ -5,6 +5,8 @@ import Header from "./Header"
 import Showcase from "@/components/Showcase"
 import { useRouter } from "next/router"
 
+
+
 const Layout = ({ title, keywords, description, children }) => {
   const router = useRouter()
   return (

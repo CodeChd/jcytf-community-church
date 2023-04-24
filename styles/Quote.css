@@ -1,12 +1,11 @@
 
 
 .inner-container{
-    display: flex;
-    position: relative;
-    align-items: center;
-    padding: 1rem 0 0 1rem;
-    justify-content: flex-start;
-    
+display: flex;
+position: relative;
+align-items: center;
+padding: 1rem 0 0 1rem;
+justify-content: flex-start;
 }
 
 

@@ -90,7 +90,7 @@
 }
 
 .wrapper{
-    padding: 5rem 15vw;
+    padding: 5rem 12vw;
 
    
 }
@@ -141,7 +141,7 @@
     max-width: 65ch;
     font-weight: 20px;
     line-height: 1.8;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .readmore{

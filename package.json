@@ -16,6 +16,7 @@
     "next-absolute-url": "^1.2.2",
     "qs": "^6.11.0",
     "react": "18.2.0",
+    "react-best-chatbot": "^2.0.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-responsive": "^9.0.2",
