@@ -7,7 +7,7 @@ export const NEXT_URL = process.env.NEXT_PUBLIC_FRONTEND_URL || 'http://localhos
 export const steps = [
     {
       id: 1,
-      content: "Hi, Patron!",
+      content: "Hi, Visitor!",
       goTo: 2,
     },
     {
