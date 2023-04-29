@@ -1,3 +1,7 @@
-This is a fullstack application community church in payatas
+Community church based in payatas.
 
-run this first https://capstone-jcytf-ccc1.onrender.com/ wait for it to load
+First run the following link: https://capstone-jcytf-ccc1.onrender.com/ 
+Second run https://jcytfchurch.vercel.app
+
+Render cloud hosting free tier feature only allows the server to run while in use
+so it takes time to load :)
