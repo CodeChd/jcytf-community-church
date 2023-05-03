@@ -6,7 +6,7 @@ export default function Answers() {
       <motion.p
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }} 
         viewport={{ once: true }}
       >
         LOOKING FOR ANSWERS? THINK YOUR VISITING THIS SITE IS A COINCIDENCE?
@@ -15,7 +15,7 @@ export default function Answers() {
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{delay:0.3, duration: 0.5 }}
+        transition={{delay:0.1, duration: 0.3 }}
         viewport={{ once: true }}
         className="answers-heading"
       >
