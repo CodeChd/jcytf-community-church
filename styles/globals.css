@@ -33,7 +33,7 @@ body {
 /*
   6. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img, picture, video, canvas {
   display: block;
   max-width: 100%;
 }
@@ -97,11 +97,11 @@ h1 {
   border: 0;
   border-radius: 7px;
   padding: 1rem;
-  margin-left: 1.5rem;
   text-transform: uppercase;
   cursor: pointer;
 }
 .btn-event {
+border-radius: 7px;
   font: inherit;
   font-size: 15px;
   background: #000;

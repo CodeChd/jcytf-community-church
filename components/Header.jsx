@@ -21,23 +21,21 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.imgLogo}>
-          <Link href="/">
-            <Image
-              className={styles.nav_logo}
-              src="/images/jcytf.png"
-              width={68}
-              height={60}
-            />
-          </Link>
-        </div>
+        <Link href="/">
+          <Image src="/images/jcytf.png" width={68} height={60} />
+        </Link>
+
         <Chatbot steps={steps} options={options} theme={theme} />
 
+        <div className={styles.navIcon} onClick={handleIcon}>
+          {click ? <HiX fontSize="2rem" /> : <FaBars fontSize="2rem" />}
+        </div>
+ 
         <nav
           className={
             click
-              ? `${styles.navbar_container_menu}  ${styles.active}`
-              : ` ${styles.navbar_container_menu} `
+              ? `${styles.navbar_container_menu}  ${styles.active} `
+              : ` ${styles.navbar_container_menu}`
           }
         >
           <ul>
@@ -71,7 +69,7 @@ const Header = () => {
               <div className={styles.btn_nav}>
                 <li>
                   <Link href="/account/dashboard">
-                    <h4>DASHBOARD</h4>
+                    <h3>DASHBOARD</h3>
                   </Link>
                 </li>
 
@@ -85,10 +83,6 @@ const Header = () => {
             )}
           </ul>
         </nav>
-
-        <div className={styles.navIcon} onClick={handleIcon}>
-          {click ? <HiX fontSize="2rem" /> : <FaBars fontSize="2rem" />}
-        </div>
       </div>
     </header>
   );

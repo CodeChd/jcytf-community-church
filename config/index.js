@@ -67,5 +67,7 @@ export const steps = [
     endContent: "Thank you for your patience 👋",
     botAvatarSrc: "/images/JCYTF_FOOTER.png",
     messageDelay: 900,
+    refreshComponent: "Refresh",
+    closeComponent: "Close",
 
   };

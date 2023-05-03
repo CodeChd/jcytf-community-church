@@ -1,6 +1,16 @@
+.subContainer{
+    min-height: 90vh;
+   display: flex;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+
 .auth{
     max-width: 500px;
-    margin: auto;
+    width: 500px;
+    margin-inline: auto;
     padding: 30px;
     box-shadow: 0 10px 20px  0px rgba(50, 50, 50,0.52 );
 }

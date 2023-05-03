@@ -8,34 +8,26 @@ import Answers from "@/components/Answers";
 import OurPastor from "@/components/OurPastor";
 
 export default function Home({ events }) {
-
-
-
   return (
     <Layout>
-
-      <OurStory/>
-      <Quote/>
-      <Events   events={events}/>
-      <WhatNext/>
-      <OurPastor/>
-      <Answers/>
-
-
+      <OurStory />
+      <Quote />
+      <Events events={events} />
+      <WhatNext />
+      <OurPastor />
+      <Answers />
     </Layout>
   );
 }
 
-
 export async function getServerSideProps() {
-
   //fetch events
-  const res = await fetch(`${ API_URL }/api/events?sort=date%3Aasc&pagination[limit]=3&populate=*`)
-  const events = await res.json()
-
+  const res = await fetch(
+    `${API_URL}/api/events?sort=date%3Aasc&pagination[limit]=3&populate=*`
+  );
+  const events = await res.json();
 
   return {
     props: { events },
- 
-  }
+  };
 }
