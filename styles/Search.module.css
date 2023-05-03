@@ -1,9 +1,7 @@
-.search input{
-    height: 2.5rem;
-    border: 1px solid gray;
-    border-radius: 5px;
-    width: 200px;
-    padding: 5px;
- 
-
+.search input {
+  height: 2.5rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 200px;
+  padding: 5px;
 }

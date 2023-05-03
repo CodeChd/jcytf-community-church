@@ -29,10 +29,11 @@ export default function login() {
 
   return ( 
     <Layout title="User Login">
-        <div className="sub-container">
+        <div className={`${styles.subContainer}`}>
         <div className={styles.auth}>
             <h1>
-                <FaUser/> LOGIN
+            <FaUser/> LOGIN
+                
             </h1>
             <ToastContainer/>
             <form onSubmit={handleSubmit}>

@@ -39,7 +39,7 @@ export default function Register() {
 
     return (
         <Layout title="User Registration">
-            <div className="sub-container">
+            <div className={`${styles.subContainer}`}>
                 <div className={styles.auth}>
                     <h1>
                         <FaUser /> REGISTER
@@ -65,7 +65,7 @@ export default function Register() {
 
                         <input type="submit" value='Register' className='btn' />
                     </form>
-                    <p>Already have an account? <Link href='/account/login'>Login</Link></p>
+                    <p>Already have an account? <Link href='/account/enter'>Login</Link></p>
                 </div>
             </div>
         </Layout>

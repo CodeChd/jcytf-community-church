@@ -1,165 +1,129 @@
+.events-container {
+  display: flex;
+  padding: 10rem 11rem 10rem 11rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+.events-container::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
 
-.events-container{
-    display: flex;
-    padding: 10rem 12rem 10rem 12rem;
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
+.events-container * {
+  z-index: 10;
+}
+
+.ft-home {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.events-container hr {
+  margin: 0 0 2.5em 0;
+}
+
+.events-container hr {
+  margin-left: -81.999px;
+  width: 0;
+}
+
+.events-container hr::after {
+  content: "";
+  width: 670px;
+  height: 2px;
+  background-color: aliceblue;
+  position: absolute;
+  left: 0;
+}
+
+.more-events {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-more {
+  padding: 2rem;
+}
+
+@media (min-width: 560px) {
+  .events-container {
+    margin-top: -50px;
+    background: url("/images/large_crowd.jpg") no-repeat;
     position: relative;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-
-
-}
-.events-container::after{
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
+    background-size: cover;
+  }
 }
 
-
-.events-container  *{
-    z-index: 10;
-}
-
-.ft-home{
-    font-size: clamp(2.5rem , 5vw, 4rem);
-}
-
-.events-container hr{
-    margin: 0 0 2.5em 0;
-}
-
-
-
-.events-container hr{
-    margin-left: -81.999px;
-    width: 0;
-
-}
-
-.events-container hr::after{
-        content: "";
-        width: 670px;
-        height: 2px;
-        background-color: aliceblue;
-        position: absolute;
-        left: 0;
-}
-
-
-.more-events{
-    align-self: center;
-}
-
-.btn-more{
-    padding: 2rem;
-}
-
- 
-
-
-
-
-@media(min-width: 560px){
-
-    .events-container{
-        margin-top: -50px;
-        background:  url("/images/large_crowd.jpg") no-repeat;
-        position: relative;
-        background-size: cover ;
-    }
-}
-
-
-@media (min-width: 760px){
-
-    .events-container{
-        margin-top: -50px;
-        background:  url("/images/large_crowd.jpg") no-repeat;
-        position: relative;
-        background-size: cover ;
-        background-position: center;
-    }
-  
-  
+@media (min-width: 760px) {
+  .events-container {
+    margin-top: -50px;
+    background: url("/images/large_crowd.jpg") no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (max-width: 1200px) {
+  .events-container hr::after {
+    width: 600px;
+  }
+  .events-container{
+  padding: 10rem 8rem 10rem 8rem;
 
-    .events-container hr::after{
-        width: 600px;
-
-    }
-    
-
-
+  }
 }
 
 @media (max-width: 960px) {
+  .events-container hr::after {
+    width: 420px;
+  }
 
-    .events-container hr::after{
-        width: 420px;
-
-    }
-    
-
-
-    .events-container{
-        padding: 10rem 5rem 10rem 5em;
-
-
-    }
-
-   
-
-
+  .events-container {
+    padding: 10rem 5rem 10rem 5rem;
+  }
 }
 
+@media (max-width: 560px) {
+  .events-container {
+    margin-top: 0;
+    background: url("/images/large_crowd.jpg") no-repeat bottom center;
+    position: relative;
+    background-size: cover;
+    padding: 10rem 5rem 10rem 5rem;
+    position: relative;
+  }
 
+  .ft-home {
+    font-size: 3rem;
+    position: absolute;
+    top: 80px;
+    left: 50px;
+  }
 
-@media(max-width: 560px){
+  .events-container hr::after {
+    width: 65vw;
+  }
 
-    .events-container{
-        margin-top: 0;
-        background:  url("/images/large_crowd.jpg") no-repeat bottom center;
-        position: relative;
-        background-size: cover ;
-        padding: 10rem 5rem 10rem 5rem;
-        position: relative;
-        
-        
-        
-    }
-
-    .ft-home{
-        font-size:3rem;
-        position: absolute;
-        top: 80px;
-        left: 50px;
-    }
-
-    .events-container hr::after{
-        width: 65vw;
-  
+  hr {
+    display: none;
+  }
 }
 
-    hr{
-      display: none;
-    }
-}
-
-@media(max-width: 430px){
-    .ft-home{
-        font-size:2em;
-        position: absolute;
-        top: 80px;
-        left: 45px;
-    }
-
+@media (max-width: 430px) {
+  .ft-home {
+    font-size: 2em;
+    position: absolute;
+    top: 80px;
+    left: 45px;
+  }
 }

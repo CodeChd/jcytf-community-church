@@ -1,29 +1,25 @@
-.dash h1 span{
-    font-size: 20px;
-    color: #777;
-    margin-left: 10px;
-    
+.dash h1 span {
+  font-size: 20px;
+  color: #777;
+  margin-left: 10px;
 }
 
-.dash h3{
-    font-size: 25px;
-    color: darkred;
+.dash h3 {
+  font-size: 25px;
+  color: darkred;
 }
 
-.grid{
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rem;
+}
+
+@media (max-width: 560px) {
+  .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20rem;
-
-}
-
-@media (max-width: 560px)
-{
-    .grid{
-        display: grid;
-        grid-template-columns: 1fr minmax(.6rem ,9rem) ;
-        gap: 1rem;
-        align-items: center;
-    
-    }
+    grid-template-columns: 1fr minmax(0.6rem, 9rem);
+    gap: 1rem;
+    align-items: center;
+  }
 }

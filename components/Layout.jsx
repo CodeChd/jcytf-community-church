@@ -22,7 +22,7 @@ const Layout = ({ title, keywords, description, children }) => {
 
       <Header />
       {router.pathname === '/' && <Showcase />}
-      <main className={`${styles.container} page`}>
+      <main className={`${styles.container}  page`}>
 
         {children}
       </main>
