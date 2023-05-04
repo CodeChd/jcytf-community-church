@@ -20,9 +20,9 @@ export default function EventItem({ evt }) {
         {evt.attributes.image.data === null ? (
           <Image
             src={
-              router.pathname === "/events"
-                ? "/images/event-default_dark.svg"
-                : "/images/event-default.svg"
+              // router.pathname === "/events"
+                "/images/JCYTF_FOOTER.png"
+                // : "/images/event-default.svg"
             }
             width={170}
             height={150}
@@ -40,12 +40,11 @@ export default function EventItem({ evt }) {
       </div>
 
       <div className={styles.info}>
-        <h3>{evt.attributes.name}</h3>
         <span>
           {evt.attributes.date
             ? new Date(evt.attributes.date).toLocaleDateString("en-US")
-            : ""}{" "}
-          AT {evt.attributes.time && evt.attributes.time}
+            : <p>N/A</p>}&nbsp;at&nbsp;{evt.attributes.time && evt.attributes.time}
+            <h3>{evt.attributes.name}</h3>
         </span>
       </div>
 
