@@ -23,9 +23,9 @@ export default function EventsPage({ events, total, page }) {
       </div>
 
       </div>
-      <div className="center">
+      <div className="events-entity">
 
-      {events.data.length === 0 && <h3>No events to show!</h3>}
+      {events.data.length === 0 && <h3 className="fsi-700">No events to show...</h3>}
 
       </div>
 

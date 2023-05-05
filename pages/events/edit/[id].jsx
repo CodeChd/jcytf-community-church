@@ -188,7 +188,7 @@ const EditEvents = ({ Edata ,token}) => {
                     />
 
                 </div>
-                <input type="submit" value="Update Event" className="btn" />
+                <input type="submit" value="Update Event" className="btn-event-details" />
             </form>
                      </div>
         </Layout>

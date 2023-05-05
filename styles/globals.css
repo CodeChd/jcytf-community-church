@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bigelow+Rules&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bigelow+Rules&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap");
 
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /*
@@ -18,7 +19,8 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html, body {
+html,
+body {
   height: 100%;
 }
 /*
@@ -33,28 +35,38 @@ body {
 /*
   6. Improve media defaults
 */
-img, picture, video, canvas {
+img,
+picture,
+video,
+canvas {
   display: block;
   max-width: 100%;
 }
 /*
   7. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /*
   8. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-
-
 html,
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -62,27 +74,42 @@ a {
   color: steelblue;
 }
 
-p{
-
+p {
   font-size: 18px;
-
 }
 
 h1 {
   margin-bottom: 20px;
 }
 
+
+.search-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-block: 10rem;
+  margin-inline: 5rem;
+}
+
 .btn {
   display: inline-block;
-  background: ghostwhite  ;
+  background: ghostwhite;
   color: #3e3e3e;
   padding: 10px 20px;
   cursor: pointer;
   border: 0;
   border-radius: 5px;
 }
-
-
+.btn-event-details {
+  display: inline-block;
+  background: #e0985a;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  margin-block: 1rem;
+}
 
 .btn:hover {
   opacity: 0.9;
@@ -100,8 +127,9 @@ h1 {
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .btn-event {
-border-radius: 7px;
+  border-radius: 7px;
   font: inherit;
   font-size: 15px;
   background: #000;
@@ -114,10 +142,10 @@ border-radius: 7px;
   cursor: pointer;
 }
 
-.center{
+.events-entity {
+  margin-block: 1rem;
   text-align: center;
 }
-
 
 .btn-nav {
   font: inherit;
@@ -132,7 +160,7 @@ border-radius: 7px;
   cursor: pointer;
 }
 
-.pagination{
+.pagination {
   font: inherit;
   font-size: 13px;
   background: #000;
@@ -158,31 +186,26 @@ border-radius: 7px;
   margin-right: 5px;
 }
 
-.ft-home{
+.ft-home {
   font-family: Anton, serif;
   letter-spacing: 4.77px;
   font-weight: 100;
 }
 
-
-.sub-container{
+.sub-container {
   max-width: 80vw;
   margin: 8rem auto;
 }
 
-
- 
-
-
-.img-container{
+.img-container {
   width: 100%;
 }
 
-.img-container > div{
+.img-container > div {
   height: unset !important;
 }
 
-.img-container .img{
+.img-container .img {
   object-fit: contain;
   width: 100% !important;
   position: relative !important;

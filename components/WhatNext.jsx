@@ -22,8 +22,9 @@ export default function WhatNext() {
           this is what He has always done. Follow along with the progress of the
           “Go & Make” initiative.
         </p>
-
-        <button className="join-btn">Join A Community</button>
+        <div className="readmore">
+        <a className="join-btn">Join A Community</a>
+        </div>
       </motion.div>
 
       <motion.div

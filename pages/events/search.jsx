@@ -11,14 +11,17 @@ export default function SearchPage({ events }) {
 
   return (
     <Layout title='Search Results'>
+      <div className="search-container">
+
         <Link href='/events'> {'<'} Go Back</Link>
       <h1>Search Results for {router.query.term}</h1>
-      {events.length === 0 && <h3>No events to show!</h3>}
+      {events.length === 0 && <h3>No events to show..</h3>}
 
       {events.map((evt) => (
         <EventItem key={evt.id} evt={evt}/>
-      ))
+        ))
       }
+      </div>
     </Layout>
   );
 }

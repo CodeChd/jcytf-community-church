@@ -1,3 +1,9 @@
+.search {
+  display: flex;
+  place-content: center;
+}
+
+
 .search input {
   height: 2.5rem;
   border: 1px solid gray;

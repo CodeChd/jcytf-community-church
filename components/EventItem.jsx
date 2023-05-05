@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 export default function EventItem({ evt }) {
   const router = useRouter();
-
   return (
     <motion.div
       initial={{ y: 50, opacity: 0 }}
@@ -19,11 +18,7 @@ export default function EventItem({ evt }) {
       <div className={styles.img}>
         {evt.attributes.image.data === null ? (
           <Image
-            src={
-              // router.pathname === "/events"
-                "/images/JCYTF_FOOTER.png"
-                // : "/images/event-default.svg"
-            }
+            src={"/images/JCYTF_FOOTER.png"}
             width={170}
             height={150}
             alt="Event"
@@ -41,17 +36,29 @@ export default function EventItem({ evt }) {
 
       <div className={styles.info}>
         <span>
-          {evt.attributes.date
-            ? new Date(evt.attributes.date).toLocaleDateString("en-US")
-            : <p>N/A</p>}&nbsp;at&nbsp;{evt.attributes.time && evt.attributes.time}
-            <h3>{evt.attributes.name}</h3>
+          {evt.attributes.date ? (
+            new Date(evt.attributes.date).toLocaleDateString("en-US")
+          ) : (
+            <p>N/A</p>
+          )}
+          &nbsp;at&nbsp;{evt.attributes.time && evt.attributes.time}
+          <h3>{evt.attributes.name}</h3>
         </span>
       </div>
 
       <motion.div transition={{ delay: 0.3 }} className={styles.link}>
-        <Link href={`/events/${evt.attributes.slug}`}>
-          <div className="btn ">Details</div>
-        </Link>
+        {router.pathname === "/" ? null : router.pathname === "/events" ||
+          "/search" ? (
+          <Link href={`/events/${evt.attributes.slug}`}>
+            <div className="btn-event-details">Details</div>
+          </Link>
+        ) : null}
+
+        {router.pathname === "/" ? (
+          <Link href={`/events/${evt.attributes.slug}`}>
+            <div className="btn">Details</div>
+          </Link>
+        ) : null}
       </motion.div>
     </motion.div>
   );

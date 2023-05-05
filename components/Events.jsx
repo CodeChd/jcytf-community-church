@@ -17,7 +17,7 @@ export default function Events({ events }) {
       <hr />
 
       <div className="center">
-        {events.data.length === 0 && <h3>No events to show!</h3>}
+        {events.data.length === 0 && <h3 className="fsi-700">No events to show...</h3>}
       </div>
 
       {events.data.map((evt) => (
