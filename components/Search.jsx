@@ -14,6 +14,7 @@ export default function Search() {
 
   return (
     <div className={styles.search}>
+
       <form onSubmit={handleSubmit}>
         <input
           type="text"
