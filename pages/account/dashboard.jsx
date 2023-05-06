@@ -28,7 +28,6 @@ export default function Dashboard({ events, token }) {
   }
 
   const delEvent = async (id) => {
-    if (confirm("Are you sure?")) {
       const res = await fetch(`${API_URL}/api/events/${id}`, {
         method: "DELETE",
         headers: {
@@ -43,7 +42,6 @@ export default function Dashboard({ events, token }) {
       } else {
         router.push("/events");
       }
-    }
   };
 
   return (

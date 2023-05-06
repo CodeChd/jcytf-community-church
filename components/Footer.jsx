@@ -72,20 +72,17 @@ const Footer = () => {
           <div className="social">
             <h2 className="orange fs-700 "> Contact Us</h2>
             <p className="text-white fs-300">
-              {" "}
-              <FaPhoneAlt /> <span className="landmark1">
+              <FaPhoneAlt /> <span className="landmark">
                 0997 574 4318
               </span>{" "}
             </p>
             <p className="text-white fs-300 ">
-              {" "}
-              <FaEnvelope />{" "}
-              <span className="landmark2">heraldoednas@gmail.com</span>{" "}
+              <FaEnvelope />
+              <span className="landmark">heraldoednas@gmail.com</span>
             </p>
             <p className="text-white fs-300 ">
-              {" "}
-              <FaFacebook />{" "}
-              <span className="landmark3">jcytfchurchpayatas</span>{" "}
+              <FaFacebook />
+              <span className="landmark">jcytfchurchpayatas</span>
             </p>
           </div>
         </div>

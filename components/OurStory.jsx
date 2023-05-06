@@ -48,7 +48,6 @@ export default function OurStory() {
           }}
           className="imgs"
         >
-          {""}
         </motion.div>
       </div>
     </div>
