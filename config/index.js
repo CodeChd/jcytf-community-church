@@ -46,7 +46,7 @@ export const steps = [
   {
     id: 11,
     content:
-      "1.Attend a Service  2.Check the Church Website  3.Contact the Church Office",
+      "Attend a Service,  Check at the bottom of home page,  Contact the Church Office",
     goTo: 4,
   },
   {
@@ -62,12 +62,14 @@ export const steps = [
   },
   {
     id: 14,
-    content:"Contact the Ministry or Service Leader,  Check the Church's Website for Opportunities,  Attend a Ministry or Service Meeting" ,
+    content:
+      "Contact the Ministry or Service Leader,  Check the Church's Website for Opportunities,  Attend a Ministry or Service Meeting",
     goTo: 4,
   },
   {
     id: 15,
-    content: "Contact the Church Office,  Request Prayer on the Church Website,  Meet with a Pastor or Leader.",
+    content:
+      "Contact the Church Office,  Request Prayer on the Church Website,  Meet with a Pastor or Leader.",
     goTo: 4,
   },
   {
