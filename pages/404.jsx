@@ -9,7 +9,7 @@ const NotFoundPage = () => {
             <div className="sub-container">
                 <div className={styles.error}>
                     <h1><FaExclamationTriangle/> 404</h1>
-                    <h4>Oops!.. there is nothing here!</h4>
+                    <h4>heyy!.. there is nothing here!</h4>
                     <Link href='/'>Go Back Home</Link>
 
                 </div>
