@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/Header.module.css";
-import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import AuthContext from "@/context/AuthContext";
 import { FaBars } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
@@ -30,7 +30,7 @@ const Header = () => {
         <div className={styles.navIcon} onClick={handleIcon}>
           {click ? <HiX fontSize="2rem" /> : <FaBars fontSize="2rem" />}
         </div>
- 
+
         <nav
           className={
             click
@@ -40,7 +40,7 @@ const Header = () => {
         >
           <ul>
             <li>
-              <Link href="/events">
+              <Link href="/visit">
                 <p> VISIT</p>
               </Link>
             </li>

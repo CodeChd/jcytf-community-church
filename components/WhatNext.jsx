@@ -23,16 +23,17 @@ export default function WhatNext() {
           “Go & Make” initiative.
         </p>
         <div className="readmore">
-        <a className="join-btn">Join A Community</a>
+          <a className="join-btn">Join A Community</a>
         </div>
       </motion.div>
 
       <motion.div
-         initial={{ y: 50, opacity: 0 }}
-         whileInView={{ y: 0, opacity: 1 }}
-         transition={{ delay: 0.4, duration: 0.5 }}
-         viewport={{ once: true }}
-      className="img-next-container">
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+        viewport={{ once: true }}
+        className="img-next-container"
+      >
         <div className="imgs-next"></div>
       </motion.div>
     </div>
