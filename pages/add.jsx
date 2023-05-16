@@ -159,7 +159,11 @@ const AddEvents = ({ token }) => {
               onChange={handleChange}
             />
           </div>
-          <input type="submit" value="Add Event" className="btn-event-details" />
+          <input
+            type="submit"
+            value="Add Event"
+            className="btn-event-details"
+          />
         </form>
       </div>
     </Layout>

@@ -7,6 +7,7 @@ import "@/styles/WhatNext.css";
 import "@/styles/Answers.css";
 import "@/styles/OurPastor.css";
 import "@/styles/globals.css";
+import "@/styles/Visit.css";
 
 
 

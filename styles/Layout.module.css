@@ -2,3 +2,7 @@
   /* margin: 5rem 0; */
   margin: clamp(3rem, 5vw,  40rem) 0;
 }
+
+.routesMargin{
+  margin: 0;
+}

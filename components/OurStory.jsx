@@ -47,8 +47,7 @@ export default function OurStory() {
             visible: { opacity: 1, y: 0 },
           }}
           className="imgs"
-        >
-        </motion.div>
+        ></motion.div>
       </div>
     </div>
   );

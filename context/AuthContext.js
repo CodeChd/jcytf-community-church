@@ -29,18 +29,17 @@ export const AuthProvider = ({ children }) => {
 
     if (res.ok) {
       setUser(data);
-      toast.success("Successfully Registered")
-      setTimeout(() =>{
+      toast.success("Successfully Registered");
+      setTimeout(() => {
         router.push("/account/dashboard");
-
-      },2800)
+      }, 2800);
     } else {
       toast.error(data.message); //temporary
     }
   };
 
   //loguser
-  
+
   const login = async ({ email: identifier, password }) => {
     // console.log({ identifier, password });
 
@@ -58,7 +57,7 @@ export const AuthProvider = ({ children }) => {
     const data = await res.json();
     console.log(data);
 
-    if (res.ok) { 
+    if (res.ok) {
       setUser(data);
       router.push("/account/dashboard");
     } else {
@@ -79,23 +78,22 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  //if login 
+  //if login
   const checkUserLoggedIn = async (user) => {
-    const res = await fetch(`${NEXT_URL}/api/user`); 
+    const res = await fetch(`${NEXT_URL}/api/user`);
     const data = await res.json();
 
     if (res.ok) {
       setUser(data.user);
-    }  else {
-
+    } else {
       //auth for manual routing
       setUser(null);
       if (
-        router.pathname === '/account/dashboard' ||
-        router.pathname === '/add' ||
-        router.pathname === '/events/edit/[id]'
+        router.pathname === "/account/dashboard" ||
+        router.pathname === "/add" ||
+        router.pathname === "/events/edit/[id]"
       ) {
-        router.push('/account/enter');
+        router.push("/account/enter");
       }
     }
   };
