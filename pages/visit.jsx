@@ -8,22 +8,30 @@ const visit = () => {
   return (
     <Layout>
       <main style={{ paddingTop: "7rem" }}>
-        <section style={{ display: "flex" } } > 
-          <div  style={{flexBasis:"50%", textAlign: "center", alignSelf:"center"}}>
-            <p className="fsi-500"> Address Madjaas Street Group 2, Area B, Quezon City 1119 Manila </p>
-            <p className="fsi-500">  Monday to Sunday 9:00 a.m. - 5:00 p.m.</p>
+        <section className="Visit-hero">
+          <div className="Visit-hero-info">
+            <p className="fsi-500">
+              Address Madjaas Street Group 2, Area B, Quezon City 1119 Manila
+            </p>
+            <p className="fsi-500"> Monday to Sunday 9:00 a.m. - 5:00 p.m.</p>
             <p className="fsi-500">Saturday - Closed</p>
             <p className="fsi-500">Contact 0997 574 4318</p>
             <p className="fsi-500">heraldoednas@gmail.com</p>
-            <div style={{marginTop: "2rem"}}>
-
-            <Link href="https://www.google.com/maps/place/Jesus+Christ+Yesterday+Today+And+Forever+Church+Inc.+JCYTF/@14.6442202,120.9615001,12.54z/data=!4m10!1m2!2m1!1sMadjaas+Street+Group+2,+Area+B,+Quezon+City,+1119+Metro+Manila!3m6!1s0x3397ba612cfb73a1:0x9f280217a54c2b46!8m2!3d14.7124479!4d121.0989109!15sCj5NYWRqYWFzIFN0cmVldCBHcm91cCAyLCBBcmVhIEIsIFF1ZXpvbiBDaXR5LCAxMTE5IE1ldHJvIE1hbmlsYZIBEGNocmlzdGlhbl9jaHVyY2jgAQA!16s%2Fg%2F11c6q8r45p" className="btn-visit" >Get Directions</Link>
+            <div style={{ marginTop: "2rem" }}>
+              <Link
+                href="https://www.google.com/maps/place/Jesus+Christ+Yesterday+Today+And+Forever+Church+Inc.+JCYTF/@14.6442202,120.9615001,12.54z/data=!4m10!1m2!2m1!1sMadjaas+Street+Group+2,+Area+B,+Quezon+City,+1119+Metro+Manila!3m6!1s0x3397ba612cfb73a1:0x9f280217a54c2b46!8m2!3d14.7124479!4d121.0989109!15sCj5NYWRqYWFzIFN0cmVldCBHcm91cCAyLCBBcmVhIEIsIFF1ZXpvbiBDaXR5LCAxMTE5IE1ldHJvIE1hbmlsYZIBEGNocmlzdGlhbl9jaHVyY2jgAQA!16s%2Fg%2F11c6q8r45p"
+                className="btn-visit"
+              >
+                Get Directions
+              </Link>
             </div>
           </div>
-          <Image src={Place} />
+          <div>
+            <Image src={Place} />
+          </div>
         </section>
         <section className="visit-first-bg text-white text-center">
-          <div style={Properties}>
+          <div className="visit-first-txt" style={Properties}>
             <h3 className="fsi-500 text-center">
               HELPING PEOPLE TAKE THEIR NEXT STEPS TOWARD CHRIST…TOGETHER.
             </h3>
@@ -37,7 +45,7 @@ const visit = () => {
           </div>
         </section>
         <section className="visit-second-bg text-white">
-          <div style={Properties}>
+          <div className="visit-second-txt" style={Properties}>
             <h3 className="fsi-500 ">WHO WE ARE</h3>
             <hr className="hr-visit__1" />
             <p className="fsi-300 text-center">

@@ -4,8 +4,8 @@ export const Properties = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    maxWidth: "50%",
     margin: "0 auto",
-    gap: "1rem"
+    gap: "1rem",
+    padding: "1rem"
 }
 
