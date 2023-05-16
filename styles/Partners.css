@@ -50,11 +50,11 @@
 .partners-info{
     min-height: 50vh;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
-    align-items: center;
     justify-content: center;
     text-align: left;
+    margin-top: 9rem;
 }
 
 .partners-samaritana{
