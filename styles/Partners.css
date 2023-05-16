@@ -1,0 +1,73 @@
+.partners-container{
+    display: flex;
+    min-height: 20vh;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.hr-visit__partners {
+    width: 5vw;
+    height: 5px;
+    background-color: #e0985a;
+    border: none;
+  }
+
+
+.partners-heading{
+    margin-left: 2rem;
+}
+
+
+
+
+.partners-bg {
+    position: relative;
+    background: url("/images/partners.jpeg") center bottom no-repeat;
+  
+    min-height: 70vh;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+
+
+    /*  */
+  
+  }
+  
+
+.partners-info{
+    min-height: 50vh;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.partners-samaritana{
+    flex: 1;
+    
+}
+.partners-pem{
+    flex: 1;
+    
+}
+.partners-b1m{
+    flex: 1;
+
+}
+
+
