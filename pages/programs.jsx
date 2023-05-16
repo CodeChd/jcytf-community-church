@@ -18,7 +18,7 @@ const programs = () => {
           </h2>
 
           <div>
-            <p>
+            <p className="fsi-400">
               Want to get connected? Try a life group. Life groups are meeting
               at homes and coffee shops all across the community and at our
               church. There are groups available for just men or just women,

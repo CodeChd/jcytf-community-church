@@ -9,6 +9,7 @@ import "@/styles/OurPastor.css";
 import "@/styles/globals.css";
 import "@/styles/Visit.css";
 import "@/styles/Programs.css";
+import "@/styles/Partners.css";
 
 
 
