@@ -42,7 +42,7 @@ const partners = () => {
         </main>
         <div className="gcash ">
 
-          <h2 className="fsi-500 gcash-heading" >Do you want to become our ministry partner? You cand send your cash gift to expand God's Kingdom!</h2>
+          <h2 className="fsi-500 gcash-heading" >Do you want to become our ministry partner? You can send your cash gift to expand God's Kingdom!</h2>
      
           <p className="fsi-500 gcash-info">GCASH number: 09555315564 Carla B.</p>
         </div>
