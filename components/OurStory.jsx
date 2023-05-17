@@ -30,7 +30,7 @@ export default function OurStory() {
           </p>
         </div>
         <div className="readmore">
-          <a className="btn-readmore text-white" href="#">
+          <a href="/visit" className="btn-readmore text-white">
             READ MORE
           </a>
         </div>
