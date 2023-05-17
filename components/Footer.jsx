@@ -70,11 +70,11 @@ const Footer = () => {
           <div className="social">
             <h2 className="orange fs-700 "> Contact Us</h2>
             <p className="text-white fs-300">
-              <FaPhoneAlt /> <span className="landmark">0997 574 4318</span>{" "}
+              <FaPhoneAlt /> <span className="landmark">0997 574 4318</span>
             </p>
             <p className="text-white fs-300 ">
               <FaEnvelope />
-              <a href="mailto:raldoednas@gmail.com" className="landmark">heraldoednas@gmail.com</a>
+              <a href="mailto:heraldoednas@gmail.com" className="landmark">heraldoednas@gmail.com</a>
             </p>
             <p className="text-white fs-300 ">
               <FaFacebook />
