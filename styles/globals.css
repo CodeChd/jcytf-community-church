@@ -212,54 +212,6 @@ h1 {
   height: unset !important;
 }
 
-
-/* visit page */
-.btn-visit{
-  background-color: #e0985a;
-  font: inherit;
-  font-size: 16px;
-  filter: brightness(120%);
-  color: #fff !important;
-  border: 0;
-  border-radius: 7px;
-  padding: 1rem;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.text-center{
-  text-align: center;
-}
-
-.main-visit{
-  position: relative;
-}
-
-.visit-first-bg{
-  background: url("../public/images/about.jpg");
-}
-.visit-second-bg{
-  background: url("../public/images/identity.jpg");
-}
-.visit-third-bg{
-  background: url("../public/images/mission.jpg");
-}
-
-
-.bt-border::after{
-  content: "";
-  padding: 8px;
-  border-bottom: solid #e0985a;
-  border-bottom-width: 6px;
-  position: absolute;
-  left: 54rem;
-  right: 54rem;
-  bottom: 50%;
-}
-
-.hr-visit__1{
-  width: 10vw;
-  height: 5px;
-  background-color: #e0985a;
-  border: none;
+.lowercase{
+  text-transform: lowercase;
 }

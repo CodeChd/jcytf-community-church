@@ -153,6 +153,7 @@
 /* elements */
 
 .landmark{
+    color: white;
     display: inline;
     padding-left: 5px;
   }

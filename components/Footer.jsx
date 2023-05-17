@@ -70,15 +70,15 @@ const Footer = () => {
           <div className="social">
             <h2 className="orange fs-700 "> Contact Us</h2>
             <p className="text-white fs-300">
-              <FaPhoneAlt /> <span className="landmark">0997 574 4318</span>{" "}
+              <FaPhoneAlt /> <span className="landmark">0997 574 4318</span>
             </p>
             <p className="text-white fs-300 ">
               <FaEnvelope />
-              <span className="landmark">heraldoednas@gmail.com</span>
+              <a href="mailto:heraldoednas@gmail.com" className="landmark">heraldoednas@gmail.com</a>
             </p>
             <p className="text-white fs-300 ">
               <FaFacebook />
-              <span className="landmark">jcytfchurchpayatas</span>
+              <a href="https://web.facebook.com/jcytfchurchpayatas" target="_blank" className="landmark">jcytfchurchpayatas</a>
             </p>
           </div>
         </div>

@@ -64,17 +64,15 @@ const visit = () => {
             <h3 className="fsi-500 ">OUR MISSION & VISION</h3>
             <hr className="hr-visit__1" />
             <div style={{ marginBlock: "1rem" }}>
-              <h4>JCYTF MISSION</h4>
               <p className="fsi-300">
-                TO CONNECT WITH GOD, CONNECT WITH OTHERS, AND CONNECT OTHERS
-                WITH GOD
+                to connect with god, connect with others, and connect others
+                with God
               </p>
 
-              <h4>JCYTF VISION</h4>
               <p className="fsi-300">
-                A TRANSFORMED FOLLOWERS OF JESUS CHRIST WHO EXTEND GOD'S LOVE TO
-                THE NEIGHBORHOOD AND WILL EFFECT TRANSFORMATION IN THE COMMUNITY
-                AND BEYOND.
+                a transformed followers of jesus christ who extend God's love to
+                the neighborhood and will effect transformation in the community
+                and beyond.
               </p>
             </div>
           </div>
