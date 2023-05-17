@@ -27,3 +27,23 @@
     max-width: 50%;
     margin: 0 auto;
 }
+
+
+@media (max-width: 889px){
+    .ministry-bg{
+       background-position-x: right;
+    }
+    .ministry-info{
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px){
+    .ministry-bg{
+        background-position-x: -80rem;
+     }
+    .ministry-info{
+        padding: 1rem;
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
