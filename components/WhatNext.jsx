@@ -23,7 +23,7 @@ export default function WhatNext() {
           “Go & Make” initiative.
         </p>
         <div className="readmore">
-          <a href="/programs" className="join-btn">Join A Community</a>
+          <a href="/ministry" className="join-btn">Join A Community</a>
         </div>
       </motion.div>
 
