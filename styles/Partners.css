@@ -1,73 +1,135 @@
-.partners-container{
-    display: flex;
-    min-height: 20vh;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    
+.partners-container {
+  padding-top: 7rem;
+  display: flex;
 }
 
 .hr-visit__partners {
-    width: 5vw;
-    height: 5px;
-    background-color: #e0985a;
-    border: none;
-  }
-
-
-.partners-heading{
-    margin-left: 2rem;
+  width: 5rem;
+  height: 5px;
+  background-color: #e0985a;
+  border: none;
 }
 
-
-
+.partners-heading {
+  margin-left: 2rem;
+}
 
 .partners-bg {
-    position: relative;
-    background: url("/images/partners.jpeg") center bottom no-repeat;
-  
-    min-height: 70vh;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-    padding: 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    width: 100%;
-    position: absolute;
+  background: url("/images/partners.jpeg") center bottom no-repeat;
 
+  min-height: 50vh;
 
-    /*  */
-  
-  }
-  
+  /* Create the parallax scrolling effect` */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.partners-info{
-    min-height: 50vh;
-    display: flex;
-    gap: 2rem;
-    padding: 1rem;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  width: 100%;
+  position: absolute;
+
+  /*  */
+}
+
+.partners-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+  text-align: left;
+  max-width: 90ch;
+}
+
+.partners-samaritana {
+  flex: 1;
+}
+.partners-pem {
+  flex: 1;
+}
+.partners-b1m {
+  flex: 1;
+}
+
+.gcash {
+  display: flex;
+  max-width: 50%;
+  align-items: center;
+  gap: 4rem;
+  text-align: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+@media (max-width: 980px) {
+  .partners-container {
+    padding-top: 2rem;
     justify-content: center;
+  }
+
+  .partners-heading{
+    margin:1rem 0;
+  }
+  .partners-bg {
+    min-height: 60vh;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .partners-info{
+    gap: 8px;
+  }
+
+  .gcash {
+    max-width: 100%;
+    gap: 4px;
     text-align: left;
-    margin-top: 9rem;
+    align-items: flex-start;
+    margin-left: 1rem;
+  }
+
+  .gcash-heading {
+    font-size: 1.3rem;
+  }
+  .gcash-info {
+    font-size: 1.3rem;
+  }
 }
 
-.partners-samaritana{
-    flex: 1;
+@media (max-width: 680px) {
+    .partners-sponsor-heading{
+        font-size: 1rem;
+    }
+    .partners-bg{
+        min-height: 70vh;
+    }
+    .partners-text{
+        font-size: 14px;
+    }
+  .gcash-heading {
+    font-size: 1rem;
+  }
+  .gcash-info {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 400px){
+ 
+
+    .partners-text{
+        font-size: 13px;
+    }
+  .gcash-heading {
+    font-size: 0.8rem;
+  }
+  .gcash-info {
+    font-size: 1rem;
+  }
     
 }
-.partners-pem{
-    flex: 1;
-    
-}
-.partners-b1m{
-    flex: 1;
-
-}
-
-

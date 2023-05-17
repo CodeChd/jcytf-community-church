@@ -1,43 +1,58 @@
-.Programs-container{
-    display: grid;
-    gap: 2rem;
+.Programs-container {
+  display: grid;
+  gap: 2rem;
 }
 
-.programs-heading{
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-    0px 8px 13px rgba(0,0,0,0.5),
-    0px 18px 23px rgba(0,0,0,0.1);
+.programs-heading {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.5),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
-.programs-hero{
-    padding-top: 9rem;
-    min-height: 50vh;
-    color: rgb(255, 255, 255);
-    display: flex;
-    align-content: center;
+.programs-hero {
+  padding-top: 9rem;
+  min-height: 50vh;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: url("../public/images/lifegroup.jpeg") center;
+}
+
+.programs-group {
+  display: flex;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.group-container {
+  margin-block: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.group-name {
+  color: white;
+  background: #e0985a;
+  padding: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 968px) {
+  .programs-group {
+    text-align: center;
+    flex-direction: column;
+  }
+  .group-container{
     justify-content: center;
-    background: url("../public/images/lifegroup.jpeg") center;
-}
+    gap: 4px;
+    font-size: 12px;
+  }
 
-.programs-group{
-    display: flex;
-    max-width: 80rem;
-    margin: 0 auto;
-}
-
-.group-container{
-    margin-block: 1rem;
-    display: flex;
-    gap: 1rem;
-}
-
-.group-name{
-    color: white;
-    background:#e0985a;
-    padding: 1rem;
-    border-radius: 15px;
-    cursor: pointer;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-    0px 8px 13px rgba(0,0,0,0.1),
-    0px 18px 23px rgba(0,0,0,0.1);
+  .group-name{
+    padding: 8px;
+    font-size: 14px;
+  }
 }
