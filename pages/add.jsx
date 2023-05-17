@@ -99,7 +99,7 @@ const AddEvents = ({ token }) => {
               />
             </div>
             <div>
-              <label htmlFor="performers">Performers</label>
+              <label htmlFor="performers">Speaker</label>
               <input
                 type="text"
                 name="performers"

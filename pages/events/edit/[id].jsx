@@ -157,7 +157,7 @@ const EditEvents = ({ Edata ,token}) => {
                         <input type="text" name="name" id="name" value={values.name} onChange={handleChange} />
                     </div>
                     <div>
-                        <label htmlFor="performers">Performers</label>
+                        <label htmlFor="performers">Speaker</label>
                         <input type="text" name="performers" id="performers" value={values.performers} onChange={handleChange} />
                     </div>
                     <div>
