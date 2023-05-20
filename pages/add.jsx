@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
-import { API_URL } from "@/config/index";
+// import { API_URL } from "@/config/index";
 import styles from "@/styles/Form.module.css";
 import { parseCookies } from "@/helper/index";
 import AuthContext from "@/context/AuthContext";

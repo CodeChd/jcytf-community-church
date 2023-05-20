@@ -215,3 +215,12 @@ h1 {
 .lowercase{
   text-transform: lowercase;
 }
+
+.filter-btn{
+  margin-left: 0.5rem;
+  padding: 0.4rem;
+  background-color: #e0985a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

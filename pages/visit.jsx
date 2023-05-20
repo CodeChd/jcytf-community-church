@@ -21,6 +21,7 @@ const visit = () => {
               <Link
                 href="https://www.google.com/maps/place/Jesus+Christ+Yesterday+Today+And+Forever+Church+Inc.+JCYTF/@14.6442202,120.9615001,12.54z/data=!4m10!1m2!2m1!1sMadjaas+Street+Group+2,+Area+B,+Quezon+City,+1119+Metro+Manila!3m6!1s0x3397ba612cfb73a1:0x9f280217a54c2b46!8m2!3d14.7124479!4d121.0989109!15sCj5NYWRqYWFzIFN0cmVldCBHcm91cCAyLCBBcmVhIEIsIFF1ZXpvbiBDaXR5LCAxMTE5IE1ldHJvIE1hbmlsYZIBEGNocmlzdGlhbl9jaHVyY2jgAQA!16s%2Fg%2F11c6q8r45p"
                 className="btn-visit"
+                target="_blank"
               >
                 Get Directions
               </Link>
