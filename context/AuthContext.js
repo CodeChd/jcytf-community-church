@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
       },
       body: JSON.stringify(user),
     });
-
+    
     const data = await res.json();
     // console.log(data);
 
@@ -39,7 +39,6 @@ export const AuthProvider = ({ children }) => {
   };
 
   //loguser
-
   const login = async ({ email: identifier, password }) => {
     // console.log({ identifier, password });
 
