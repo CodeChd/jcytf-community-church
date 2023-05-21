@@ -15,13 +15,13 @@ export default function DashEvent({ evt, handleDelete }) {
         <span className={styles.edit}>Edit Event</span>
       </Link>
 
-      {/* <a
+      <a
         href="#"
         className={styles.delete}
         onClick={() => handleDelete(evt.id)}
       >
         <FaTimes /> Delete
-      </a> */}
+      </a>
     </div>
   );
 }
