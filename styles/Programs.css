@@ -35,9 +35,8 @@
   background: #e0985a;
   padding: 1rem;
   border-radius: 15px;
-  cursor: pointer;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
-    0px 18px 23px rgba(0, 0, 0, 0.1);
+  cursor:grab;
+ 
 }
 
 @media (max-width: 968px) {

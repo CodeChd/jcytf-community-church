@@ -217,8 +217,9 @@ h1 {
 }
 
 .filter-btn{
-  margin-left: 0.5rem;
-  padding: 0.4rem;
+  margin-left: 0.8rem;
+  border-radius: 5px;
+  padding: 0.55rem;
   background-color: #e0985a;
   color: #fff;
   border: none;
